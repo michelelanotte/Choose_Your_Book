@@ -1,7 +1,8 @@
 <html>
   <head>
-    <style>
-      #stamp_div {
+    
+	<style>
+      #print_div {
 		background-color: #FFFF33;
 		text-align: center;
 		position: absolute;
@@ -9,22 +10,22 @@
 		height: 630px;
 		top: 5px;
         left: 400px;
-	}
-	</style>
-
-	<div id = 'stamp_div'>
-    <?php
-	  @session_start();
-	  include("connect_database.php");
-	  if ($_SESSION['logged_user'] != true)
-	  {
-	    header("location: login.php");
 	  }
-	  else
-		$title = $_GET['title'];
-	    $username = $_SESSION['user'];
-        $row = mysqli_query($conn, "SELECT name, surname, nation, email, sex FROM users WHERE username = '$username';");
-      	$user = mysqli_fetch_array($row);		
+	</style>
+	
+	<div id = 'print_div'>
+      <?php
+	    @session_start();
+	    include("connect_database.php");
+	    if ($_SESSION['logged_user'] != true)
+	    {
+	      header("location: login.php");
+	    }
+	    else{
+		  $title = $_GET['title'];
+	      $username = $_SESSION['user'];
+          $row = mysqli_query($conn, "SELECT name, surname, nation, email, sex FROM users WHERE username = '$username';");
+      	  $user = mysqli_fetch_array($row);		
 		  
 		  echo "<font color = 'red' size = '5' style = 'position: absolute; top: 4px; left: 110px' ><b>DATI DELL'UTENTE:</b></font><br>";
 		  
@@ -47,16 +48,16 @@
 			echo "<font size = 5 style = 'position: absolute; top: 168px; left: 130.5px' ><b>SESSO:</b></font> 
 		      <font size = 4 style = 'position: absolute; top: 170px; left: 280px' ><u>"  . $user['sex']. "</u></font><br>";
 		  
-		  echo "<br><font color = 'red' size = '5' style = 'position: relative; top: 100px; left: -15px' ><b>INFORMAZIONI LIBRO:</b></font><br>";
+		  echo "<br><font color = 'red' size = '5' style = 'position: relative; top: 100px; left: -10px' ><b>INFORMAZIONI LIBRO:</b></font><br>";
 		  
 		  echo "<font size = 4 style = 'position: absolute; top: 260px; left: 150px' ><b>LIBRO PRENOTATO :</b></font> 
-		  <font size = 4 style = 'position: absolute; top: 280px; left: 160px' ><u>" .  $title . "</u></font><br>";
+		    <font size = 4 style = 'position: absolute; top: 280px; left: 190px' ><u>" .  $title . "</u></font><br>";
 		  
 		  $query = mysqli_query($conn, "SELECT ID, Year_publication, Author FROM books WHERE Title = '$title';");
 		  $book_info = mysqli_fetch_array($query);
 		  
-		  echo "<font size = 4 style = 'position: absolute; top: 312px; left: 200px' ><b>CODICE :</b></font>
-		    <font size = 4 style = 'position: absolute; top: 333px; left: 230px' ><u>" . $book_info['ID'] . "</u></font><br>";
+		  echo "<font size = 4 style = 'position: absolute; top: 315px; left: 200px' ><b>CODICE :</b></font>
+		    <font size = 4 style = 'position: absolute; top: 335px; left: 230px' ><u>" . $book_info['ID'] . "</u></font><br>";
 			
 		  echo "<font size = 4 style = 'position: absolute; top: 370px; left: 138px' ><b>ANNO PUBBLICAZIONE :</b></font>
 		    <font size = 4 style = 'position: absolute; top: 393px; left: 223px' ><u>" . $book_info['Year_publication'] . "</u></font><br>";
@@ -69,21 +70,23 @@
           echo "<font size = 4 style = 'position: absolute; top: 488px; left: 140px' ><b>DATA PRENOTAZIONE :</b></font>
             <font size = 4 style = 'position: absolute; top: 510px; left: 165px' ><u>" . $data . "</u></font><br>";
 		  
-          echo "<font size = 3 style = 'position: absolute; top: 570px; left: 0px'> Presentandoti con questo tagliando, avrai modo di 
-		    ritirare il libro da te prenotato presso la biblioteca scolastica dell'Istituto I.T.I.S E.Fermi </font>";	   
-    ?>
+          echo "<font size = 3 style = 'position: absolute; top: 570px; left: 20px'> Presentandoti con questo tagliando, avrai modo di 
+		    ritirare il libro da te <br> prenotato presso la biblioteca scolastica dell'Istituto I.T.I.S E.Fermi </font>";	   
+        }
+	  ?>
+	</div>
+	
 	<script type="text/javascript">
 function Stampa(){
      // Prelevo dalla pagina solo i blocchi che interessano
      // Ad esempio il titolo e il corpo di un articolo
-     var corpo = document.getElementById('stamp_div').innerHTML;
-     var a = window.open('','','width=6000px,height=8000px');
-     a.document.open("text/html");
-     a.document.write("<html><head></head><body>");
+     var corpo = document.getElementById('print_div').innerHTML;
+     //a.document.open("text/html");
+     //a.document.write("<html><head></head><body>");
 
-     a.document.write("<div style='border: 1px solid #FFFF33'>"+corpo+"</div><br/>");
-     a.document.write("</body></html>");
-     a.document.close();
+     a.document.write(corpo);
+     //a.document.write("</body></html>");
+     //a.document.close();
      a.print(); 
 }
 </script>
@@ -91,8 +94,8 @@ function Stampa(){
   </head>
   
   </body>
-<input style = 'position: absolute; top: 500px; left: 42px;' type='button' value='Stampa' onClick='Stampa()' />
+<input style = 'position: absolute; top: 500px; left: 20px;' type='button' value='Stampa' onClick='Stampa()' />
   
-  <input style = 'position: absolute; top: 630px; left: 150px; background-color: #3366CC; 
+  <input style = 'position: absolute; top: 640px; left:540px; background-color: #3366CC; 
     color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
-    type = 'button' value = 'Torna alla home' onclick = "location.href = 'view_books_user.php?failed='">	
+    type = 'button' value = 'Torna indietro' onclick = "location.href = 'view_books_user.php?failed='">	
