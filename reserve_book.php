@@ -1,5 +1,5 @@
 <html>
-  <head>
+  <body>
     
 	<?php
 	  @session_start();
@@ -7,21 +7,25 @@
 	  {
 	    header("location: login.php");
 	  } 
-    ?>
 	
-  </head>
-  
-<?php
-  include("connect_database.php");
-  @session_start();
-  $title = $_GET['title'];
-  $query = mysqli_query($conn, "SELECT * FROM books WHERE Title = '$title';");
-  $book = mysqli_fetch_array($query);
-  if($book['Available'] > 0){
-	$query = mysqli_query($conn, "UPDATE books SET Available = Available - 1 WHERE Title = '$title'");   
-	header("location: receipt.php?title=$title");
-  }
-  else{
-	header("location: view_books_user.php?failed=Libro non disponibile!!");
-  }
-?>
+      include("connect_database.php");
+	  $title = $_GET['title'];
+	  $username = $_SESSION['user'];
+	  $query = mysqli_query($conn, "SELECT * FROM books WHERE Title = '$title';");
+	  $book = mysqli_fetch_array($query);
+      if($book['Available'] > 0)
+	  {
+		$query = mysqli_query($conn, "UPDATE books SET Available = Available - 1 WHERE Title = '$title'");   
+		header("location: receipt.php?title=$title");
+		$data = time();
+        $data = date('Y-m-d H:i:s', $data);
+		$id = $book['ID'];
+		$query2 = mysqli_query($conn, "INSERT INTO reservations(date, ID_books, username) 
+		  VALUES('$data', '$id', '$username');");
+      }
+      else{
+	    header("location: view_books_user.php?failed=Libro non disponibile!!");
+      }
+    ?>
+  </body>
+</html>
