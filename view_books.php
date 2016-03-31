@@ -1,6 +1,7 @@
 <html>
   <head>
-    <?php
+    
+	<?php
 	  @session_start();
       if (@$_SESSION['logged_admin'] != true)
       {
@@ -8,6 +9,7 @@
 	  }
       include("menu_admin.html");
     ?>
+	
   </head>
   <body style = ' background-color: #FFFF99'> 
     <link rel = "stylesheet" href = "style_css.css" type = "text/css">
@@ -99,6 +101,7 @@
 	      }		  
           mysqli_close($conn);
         ?>
+		
       </table>
     </div>
   </body>
