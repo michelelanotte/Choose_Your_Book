@@ -1,7 +1,6 @@
 <html>
   <head>
-    
-	<?php
+    <?php
 	  @session_start();
       if ($_SESSION['logged_admin'] != true)
       {
@@ -9,7 +8,6 @@
       }		
   	  include("menu_admin.html"); 
 	?>
-	
   </head>
   <body style = ' background-color: #FFFF99'> 
     <link rel = "stylesheet" href = "style_css.css" type = "text/css">
@@ -22,12 +20,18 @@
 	    <input size = 60 type = 'text' name = 'title'>
 	    <br>
 	    <br>
-	    <b> Disponibile: </b>
-	    <br>
-	    <select style = ' width: 200px;' name = 'availability'>	
-		  <option value = 1> Si </option>
-		  <option value = 0> No </option>
-	    </select>
+	    <b> Incrementa o decrementa disponibilit&agrave: </b>
+		<br>
+		<select style = " width: 100px;" name = 'availability'>
+          <option value = 0 selected></option>
+		  <?php
+            for($i = -20; $i < 21; $i++)
+			{
+			  echo "<option value = " . $i . ">" . $i . "</option>";	
+			}
+		    echo "</select>";
+		  ?>
+		  
 	    <br>
 	    <br>
 	    <input style = 'background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
@@ -42,17 +46,29 @@
 	    {
 	      $title = $_POST['title'];
 	      $availability = $_POST['availability'];
-		  
-	 	  @$modify =  mysqli_query($conn,"UPDATE books SET Available = '$availability' WHERE Title = '$title'");	     
-    	  $_POST['title'] = "";
-          if($modify)	{	
-	        echo "<h3 align = center style = 'color: red'> Modifica effettuata! </h3>";
+		  if($availability != 0)
+		  {
+		    $query = mysqli_query($conn, "SELECT Available FROM books WHERE Title = '$title';");
+		    @$row = mysqli_fetch_array($query);
+		    $num = $availability + $row['Available'];
+		    if($num < 0)
+		    {
+		      echo "<h3 align = center style = 'color: red'> Errore! </h3>";
+		    }
+		    else{
+	 	      @$modify =  mysqli_query($conn,"UPDATE books SET Available = Available + '$availability' WHERE Title = '$title'");	     
+    	      $_POST['title'] = "";
+              if($modify)	
+	            echo "<h3 align = center style = 'color: red'> Modifica effettuata! </h3>";
+		      else
+			    echo "<h3 align = center style = 'color: red'> Errore! </h3>"; 
+		    }
 		  }
 		  else{
             echo "<h3 align = center style = 'color: red'> Errore! </h3>"; 
-		  }
+		  }			
 	    }
 	    mysqli_close($conn);
-    ?>
-  </body>
+?>
+</body>
 </html>
