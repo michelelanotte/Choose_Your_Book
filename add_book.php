@@ -2,12 +2,15 @@
   <head>
     <?php
 	  @session_start();
-      if ($_SESSION['logged_admin'] != true)
+      
+	  if ($_SESSION['logged_admin'] != true)
       {
 	    header("location: login.php");
-      }		
+      }	
+	  
       include("menu_admin.html");
     ?>
+	
   </head>
   <body style = ' background-color: #FFFF99'>
     <link rel = "stylesheet" href = "style_css.css" type = "text/css">
