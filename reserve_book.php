@@ -15,12 +15,12 @@
 	  $book = mysqli_fetch_array($query);
       if($book['Available'] > 0)
 	  {
-		$query = mysqli_query($conn, "UPDATE books SET Available = Available - 1 WHERE Title = '$title'");   
+		$modify_availability = mysqli_query($conn, "UPDATE books SET Available = Available - 1 WHERE Title = '$title'");   
 		header("location: receipt.php?title=$title");
 		$data = time();
         $data = date('Y-m-d H:i:s', $data);
 		$id = $book['ID'];
-		$query2 = mysqli_query($conn, "INSERT INTO reservations(date, ID_books, username) 
+		$insert_info = mysqli_query($conn, "INSERT INTO reservations(date, ID_books, username) 
 		  VALUES('$data', '$id', '$username');");
       }
       else{
