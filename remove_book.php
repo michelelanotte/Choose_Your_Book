@@ -1,6 +1,7 @@
 <html>
   <head>
-    <?php
+    
+	<?php
 	  @session_start();
       if ($_SESSION['logged_admin'] != true)
       {
@@ -8,6 +9,7 @@
       }	
       include("menu_admin.html");
     ?>
+	
   </head>
   <body style = ' background-color: #FFFF99'>
     <link rel = "stylesheet" href = "style_css.css" type = "text/css">
@@ -37,6 +39,7 @@
 		    echo "<h3 align = center style = 'color: red'> Libro eliminato! </h3>";
           }  
         ?>
+		
       </div>
   </body>
 </html>
