@@ -41,6 +41,7 @@
 		
 		case 0:
 		  $_SESSION['logged_user'] = true;
+		  $_SESSION['user'] = $row['username'];
 		  header("location: homepage.php"); 
 		break;
 	  }	
