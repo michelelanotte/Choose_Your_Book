@@ -80,12 +80,13 @@
 		        echo "<td align = 'center'> si </td>";
 		      else
 		        echo "<td align = 'center'> no </td>";
-		        echo "</tr>";
+			
+			  $title = $row['Title']; 
+			  echo "<td align = 'center'><a href = 'reserve_book.php?title=$title'> Prenota ora! </a></td></tr>";	
 	        }
 	      }
 	  
 	      else{
-			$i = 1;
 		    while($row = mysqli_fetch_array($find)){
 		      echo "<tr>";
 		      echo "<td align = 'center'><h3>" . $row['ID'] . "</h3></td>";
@@ -95,12 +96,14 @@
 		      if($row['Available'] == 1)
 			    echo "<td align = 'center'> si </td>";
 		      else
-			    echo "<td align = 'center'> no </td>";  
+			    echo "<td align = 'center'> no </td>"; 
+			
 			  $title = $row['Title']; 
-			  echo "<td align = 'center'><a href = 'reserve_book.php?title=$title'> Prenota ora! </a></td>";
+			  echo "<td align = 'center'><a href = 'reserve_book.php?title=$title'> Prenota ora! </a></td></tr>";
 		    }	
 	      }		  
           mysqli_close($conn);
+		  echo "<font size =4 color = 'red'>" . @$_GET['failed'] . "</font><br><br>";	
         ?>
       </table>
     </div>
