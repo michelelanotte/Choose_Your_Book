@@ -20,7 +20,7 @@
 		$data = time();
         $data = date('Y-m-d H:i:s', $data);
 		$id = $book['ID'];
-		$insert_info = mysqli_query($conn, "INSERT INTO reservations(date, ID_books, username) 
+		$insert_info = mysqli_query($conn, "INSERT INTO reservations(date, ID_book, username) 
 		  VALUES('$data', '$id', '$username');");
       }
       else{
