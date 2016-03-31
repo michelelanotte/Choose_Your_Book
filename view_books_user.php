@@ -14,7 +14,7 @@
 	<br>
 	<div id = 'container_user'>
 	  
-	  <form action = 'view_books.php' method = 'POST'>	    
+	  <form action = 'view_books_user.php' method = 'POST'>	    
 	    <b>	Inserire titolo del libro: </b>
         <br>
         <input size = 60 type = 'text' name = 'title'>
@@ -31,7 +31,7 @@
         <br>
 		<br>
 		<input style = 'background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
-		  type = 'submit' value = 'Invio'>
+		  type = 'submit' value = 'Invio' name = 'submit'>
         <input style = 'background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
 		  type = 'button' value = 'Torna alla home' onclick = "location.href = 'homepage.php'">		  
 	  </form>
@@ -50,8 +50,7 @@
 		  @session_start();
 		  @$order = $_POST['order'];
 		  @$title = $_POST['title'];
-         
-		 switch($order)
+		  switch($order)
 			{
 			 case 1:  $find = mysqli_query($conn, "SELECT * FROM books WHERE Title LIKE '%$title%' ORDER BY ID;");
 			 break;
@@ -97,8 +96,8 @@
 			    echo "<td align = 'center'> si </td>";
 		      else
 			    echo "<td align = 'center'> no </td>";  
-			  $_SESSION['title'] = $row['Title'];
-			  echo "<td align = 'center'><a href = 'reserve_book.php'> Prenota ora! </a></td>";
+			  $title = $row['Title']; 
+			  echo "<td align = 'center'><a href = 'reserve_book.php?title=$title'> Prenota ora! </a></td>";
 		    }	
 	      }		  
           mysqli_close($conn);
