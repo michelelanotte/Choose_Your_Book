@@ -1,7 +1,7 @@
 <html>
   <head>
-    
-	<?php
+  
+    <?php
 	  @session_start();
       if ($_SESSION['logged_admin'] != true)
       {
@@ -39,7 +39,6 @@
 		    echo "<h3 align = center style = 'color: red'> Libro eliminato! </h3>";
           }  
         ?>
-		
       </div>
   </body>
 </html>
