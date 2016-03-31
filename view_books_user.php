@@ -1,7 +1,6 @@
 <html>
   <head>
-    
-	<?php
+    <?php
 	  @session_start();
 	  if ($_SESSION['logged_user'] != true)
 	  {
@@ -9,7 +8,6 @@
 	  }
 	  include("menu_user.html"); 
     ?>
-	
   </head>
   <body style = ' background-color: #FFFF99'> 
     <link rel = "stylesheet" href = "style_css.css" type = "text/css">
@@ -49,6 +47,7 @@
 		  
 	    <?php
 	      include("connect_database.php");
+		  @session_start();
 		  @$order = $_POST['order'];
 		  @$title = $_POST['title'];
          
@@ -87,6 +86,7 @@
 	      }
 	  
 	      else{
+			$i = 1;
 		    while($row = mysqli_fetch_array($find)){
 		      echo "<tr>";
 		      echo "<td align = 'center'><h3>" . $row['ID'] . "</h3></td>";
@@ -96,14 +96,13 @@
 		      if($row['Available'] == 1)
 			    echo "<td align = 'center'> si </td>";
 		      else
-			    echo "<td align = 'center'> no </td>";
-		        
-			  echo "<td align = 'center'><a href = 'reserve_book.html'> Prenota ora! </a></td>";
+			    echo "<td align = 'center'> no </td>";  
+			  $_SESSION['title'] = $row['Title'];
+			  echo "<td align = 'center'><a href = 'reserve_book.php'> Prenota ora! </a></td>";
 		    }	
 	      }		  
           mysqli_close($conn);
         ?>
-		
       </table>
     </div>
   </body>
