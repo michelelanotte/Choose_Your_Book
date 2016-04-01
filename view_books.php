@@ -1,7 +1,6 @@
 <html>
   <head>
-    
-	<?php
+    <?php
 	  @session_start();
       if (@$_SESSION['logged_admin'] != true)
       {
@@ -9,7 +8,6 @@
 	  }
       include("menu_admin.html");
     ?>
-	
   </head>
   <body style = ' background-color: #FFFF99'> 
     <link rel = "stylesheet" href = "style_css.css" type = "text/css">
@@ -57,51 +55,33 @@
 			 case 1:  $find = mysqli_query($conn, "SELECT * FROM books WHERE Title LIKE '%$title%' ORDER BY ID;");
 			 break;
 			 
-			 case 2:  $find = mysqli_query($conn, "SELECT * FROM books WHERE Title LIKE '%$title%' ORDER BY Year_publication;");
+			 case 2:  $find = mysqli_query($conn, "SELECT * FROM books WHERE Title LIKE '%$title%' ORDER BY Year_publication DESC;");
 			 break;
 			 
-			 case 3:  $find = mysqli_query($conn, "SELECT * FROM books WHERE Title LIKE '%$title%' ORDER BY Author;");
+			 case 3:  $find = mysqli_query($conn, "SELECT * FROM books WHERE Title LIKE '%$title%' ORDER BY Author, Year_publication;");
 			 break;
 			 
-			 case 4:  $find = mysqli_query($conn, "SELECT * FROM books WHERE Title LIKE '%$title%' ORDER BY Available DESC;");
+			 case 4:  $find = mysqli_query($conn, "SELECT * FROM books WHERE Title LIKE '%$title%' ORDER BY Available DESC, Year_publication DESC;");
 			 break;
 			 
 			 default: $find = mysqli_query($conn, "SELECT * FROM books WHERE Title LIKE '%$title%';");
 			 break;
 			}
-			
-	      if(@$_POST['title'] != '')
-	      {				        
+						        
 	        while($row = mysqli_fetch_array($find)){
 		      echo "<tr>";
 		      echo "<td align = 'center'><h3>" . $row['ID'] . "</h3></td>";
 		      echo "<td align = 'center'>" . $row['Title'] . "</td>";
 		      echo "<td align = 'center'>" . $row['Author'] . "</td>";
 		      echo "<td align = 'center'>" . $row['Year_publication'] . "</td>";
-		      if($row['Available'] == 1)
-		        echo "<td align = 'center'> si </td>";
+		      if($row['Available'] > 0)
+			    echo "<td align = 'center'>". $row['Available'] . "  </td>";
 		      else
-		        echo "<td align = 'center'> no </td>";
-		        echo "</tr>";
+			    echo "<td align = 'center'> Non disponibile </td>";
 	        }
-	      }
-	  
-	      else{
-		    while($row = mysqli_fetch_array($find)){
-		      echo "<tr>";
-		      echo "<td align = 'center'><h3>" . $row['ID'] . "</h3></td>";
-		      echo "<td align = 'center'>" . $row['Title'] . "</td>";
-		      echo "<td align = 'center'>" . $row['Author'] . "</td>";
-		      echo "<td align = 'center'>" . $row['Year_publication'] . "</td>";
-		      if($row['Available'] == 1)
-			    echo "<td align = 'center'> si </td>";
-		      else
-			    echo "<td align = 'center'> no </td>";
-		    }	
-	      }		  
+	    
           mysqli_close($conn);
         ?>
-		
       </table>
     </div>
   </body>
