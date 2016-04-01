@@ -74,28 +74,12 @@
 		    ritirare il libro da te <br> prenotato presso la biblioteca scolastica dell'Istituto I.T.I.S E.Fermi </font>";	   
         }
 	  ?>
-	</div>
-	
-	<script type="text/javascript">
-function Stampa(){
-     // Prelevo dalla pagina solo i blocchi che interessano
-     // Ad esempio il titolo e il corpo di un articolo
-     var corpo = document.getElementById('print_div').innerHTML;
-     //a.document.open("text/html");
-     //a.document.write("<html><head></head><body>");
-
-     a.document.write(corpo);
-     //a.document.write("</body></html>");
-     //a.document.close();
-     a.print(); 
-}
-</script>
-
+	</div>	
   </head>
   
+  <body>  
+    <input style = 'position: absolute; top: 640px; left:540px; background-color: #3366CC; 
+      color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
+      type = 'button' value = 'Torna indietro' onclick = "location.href = 'view_books_user.php?failed='">
   </body>
-<input style = 'position: absolute; top: 500px; left: 20px;' type='button' value='Stampa' onClick='Stampa()' />
-  
-  <input style = 'position: absolute; top: 640px; left:540px; background-color: #3366CC; 
-    color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
-    type = 'button' value = 'Torna indietro' onclick = "location.href = 'view_books_user.php?failed='">	
+</html>  
