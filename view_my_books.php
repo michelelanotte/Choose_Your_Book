@@ -1,6 +1,7 @@
 <html>
   <head>
-    <?php
+    
+	<?php
 	  @session_start();
 	  include("connect_database.php");
 	  if ($_SESSION['logged_user'] != true)
@@ -9,10 +10,22 @@
 	  }
 	  include("menu_user.html"); 
 	?>
+	
   </head>
   <body style = ' background-color: #FFFF99'>
     <link rel = "stylesheet" href = "style_css.css" type = "text/css">
     <div id = 'container_admin2'>
+	  <form action = 'view_my_books.php' method = 'POST'>	    
+	    <b>	Inserire titolo del libro: </b>
+        <br>
+        <input size = 60 type = 'text' name = 'title'>
+	    <br>
+		<br>
+		<input style = 'background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
+		  type = 'submit' value = 'Invio'>
+        <input style = 'background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
+		  type = 'button' value = 'Torna alla home' onclick = "location.href = 'homepage.php'">		  
+	  </form>
       <table border = 1>
 	    <tr rowspan = 2>
 		  <td align = 'center'><font size = 4 color = 'red' face = 'Lucida Calligraphy'> Codice <br> prenotazione </td>
@@ -23,8 +36,9 @@
         
 		<?php  
 	      $username = $_SESSION['user'];
+		  @$title = $_POST['title'];
           $query = mysqli_query($conn, "SELECT r.ID, r.date, b.Title, b.Author FROM reservations r, books b 
-	        WHERE r.ID_book = b.ID AND '$username' = r.username;");	  
+	        WHERE r.ID_book = b.ID AND r.username = '$username' AND Title LIKE '%$title%' ORDER BY r.date DESC, r.ID;");	  
           while($row = mysqli_fetch_array($query)){
 	        echo "<tr>";
 		    echo "<td align = 'center'><h3>" . $row['ID'] . "</h3></td>";
