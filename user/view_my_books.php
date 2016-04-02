@@ -6,7 +6,7 @@
 	  include("../connect_database.php");
 	  if ($_SESSION['logged_user'] != true)
 	  {
-	    header("location: login.php");
+	    header("location: ../login.php");
 	  }
 	  include("menu_user.html"); 
 	?>

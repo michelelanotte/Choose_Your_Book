@@ -5,7 +5,7 @@
 	  session_start();
       if ($_SESSION['logged_user'] != true)
 	  {
-        header("location: login.php");
+        header("location: ../login.php");
       }
     ?>
   </body>

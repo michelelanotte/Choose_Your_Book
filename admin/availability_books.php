@@ -4,7 +4,7 @@
 	  @session_start();
       if ($_SESSION['logged_admin'] != true)
       {
-	    header("location: login.php");
+	    header("location: ../login.php");
       }		
   	  include("menu_admin.html"); 
 	?>
