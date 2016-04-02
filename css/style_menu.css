@@ -1,0 +1,58 @@
+ul
+{
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: auto;
+  
+  background-color: #333;
+}
+
+li 
+{
+  float: left;
+}
+
+li a 
+{
+  display: block;
+  color: white; 
+  padding: 15px 0px;
+  text-decoration: none;
+}
+
+li a:hover 
+{
+  background-color: #111;
+}
+
+* {
+    box-sizing: border-box;
+  }
+		
+.col-1 {width: 8%;}
+.col-2 {width: 9%;}
+.col-3 {width: 9%;}
+.col-4 {width: 13%;}
+.col-5 {width: 6%;}
+.col-6 {width: 13%;}
+.col-7 {width: 68%;}
+.col-8 {width: 37%;}
+.col-9 {width: 20%;}
+.col-10 {width: 5%;}
+.col-11 {width: 90%;}
+.col-12 {width: 100%;}
+
+
+[class* = "col-"]
+  {
+    float: left;
+  }
+	
+@media only screen and (max-width: 768px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+	
+

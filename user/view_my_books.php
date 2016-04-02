@@ -3,7 +3,7 @@
     
 	<?php
 	  @session_start();
-	  include("connect_database.php");
+	  include("../connect_database.php");
 	  if ($_SESSION['logged_user'] != true)
 	  {
 	    header("location: login.php");
@@ -13,12 +13,13 @@
 	
   </head>
   <body style = ' background-color: #FFFF99'>
-    <link rel = "stylesheet" href = "style_css.css" type = "text/css">
-    <div id = 'container_admin2'>
+    <link rel = "stylesheet" href = "../css/style_css.css" type = "text/css">
+	<meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
+    <div class = 'container_admin2'>
 	  <form action = 'view_my_books.php' method = 'POST'>	    
-	    <b>	Inserire titolo del libro: </b>
+	    <b>	Cerca libro: </b>
         <br>
-        <input size = 60 type = 'text' name = 'title'>
+        <input size = 40 type = 'text' name = 'title'>
 	    <br>
 		<br>
 		<input style = 'background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 

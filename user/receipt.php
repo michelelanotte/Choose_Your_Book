@@ -1,25 +1,16 @@
 <html>
   <head>
-    
-	<style>
-      #print_div {
-		background-color: #FFFF33;
-		text-align: center;
-		position: absolute;
-		width: 500px;
-		height: 630px;
-		top: 5px;
-        left: 400px;
-	  }
-	</style>
-	
-	<div id = 'print_div'>
+    <meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
+    <link rel = "stylesheet" href = "../css/receipt.css" type = "text/css">
+  </head>
+  <body>
+	<div>
       <?php
 	    @session_start();
-	    include("connect_database.php");
+	    include("../connect_database.php");
 	    if ($_SESSION['logged_user'] != true)
 	    {
-	      header("location: login.php");
+	      header("location: ../login.php");
 	    }
 	    else{
 		  $title = $_GET['title'];
@@ -74,10 +65,7 @@
 		    ritirare il libro da te <br> prenotato presso la biblioteca scolastica dell'Istituto I.T.I.S E.Fermi </font>";	   
         }
 	  ?>
-	</div>	
-  </head>
-  
-  <body>  
+	</div>
     <input style = 'position: absolute; top: 640px; left:540px; background-color: #3366CC; 
       color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
       type = 'button' value = 'Torna indietro' onclick = "location.href = 'view_books_user.php?failed='">

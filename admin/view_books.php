@@ -2,22 +2,23 @@
   <head>
     <?php
 	  @session_start();
-	  if ($_SESSION['logged_user'] != true)
-	  {
-	    header("location: login.php");
+      if (@$_SESSION['logged_admin'] != true)
+      {
+	    header("location: ../login.php");
 	  }
-	  include("menu_user.html"); 
+      include("menu_admin.html");
     ?>
   </head>
   <body style = ' background-color: #FFFF99'> 
-    <link rel = "stylesheet" href = "style_css.css" type = "text/css">
+    <link rel = "stylesheet" href = "../css/style_css.css" type = "text/css">
+	<meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
 	<br>
-	<div id = 'container_user'>
+	<div class = 'container_admin2'>
 	  
-	  <form action = 'view_books_user.php' method = 'POST'>	    
-	    <b>	Inserire titolo del libro: </b>
+	  <form action = 'view_books.php' method = 'POST'>	    
+	    <b>	Cerca libro: </b>
         <br>
-        <input size = 60 type = 'text' name = 'title'>
+        <input size = 40 type = 'text' name = 'title'>
 	    <br>
 		<br>
 		<b>	Ordina per: </b>
@@ -31,9 +32,9 @@
         <br>
 		<br>
 		<input style = 'background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
-		  type = 'submit' value = 'Invio' name = 'submit'>
+		  type = 'submit' value = 'Invio'>
         <input style = 'background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
-		  type = 'button' value = 'Torna alla home' onclick = "location.href = 'homepage.php'">		  
+		  type = 'button' value = 'Torna alla home' onclick = "location.href = 'administrator.php'">		  
 	  </form>
 	  
 	  <table border = 1>
@@ -46,11 +47,11 @@
 		</tr>
 		  
 	    <?php
-	      include("connect_database.php");
-		  @session_start();
+	      include("../connect_database.php");
 		  @$order = $_POST['order'];
 		  @$title = $_POST['title'];
-		  switch($order)
+         
+		 switch($order)
 			{
 			 case 1:  $find = mysqli_query($conn, "SELECT * FROM books WHERE Title LIKE '%$title%' ORDER BY ID;");
 			 break;
@@ -67,7 +68,7 @@
 			 default: $find = mysqli_query($conn, "SELECT * FROM books WHERE Title LIKE '%$title%';");
 			 break;
 			}
-			        
+						        
 	        while($row = mysqli_fetch_array($find)){
 		      echo "<tr>";
 		      echo "<td align = 'center'><h3>" . $row['ID'] . "</h3></td>";
@@ -78,13 +79,9 @@
 			    echo "<td align = 'center'>". $row['Available'] . "  </td>";
 		      else
 			    echo "<td align = 'center'> Non disponibile </td>";
-			
-			  $title = $row['Title']; 
-			  echo "<td align = 'center'><a href = 'reserve_book.php?title=$title'> Prenota ora! </a></td></tr>";	
 	        }
-	  
+	    
           mysqli_close($conn);
-		  echo "<font size =4 color = 'red'>" . @$_GET['failed'] . "</font><br><br>";
         ?>
       </table>
     </div>

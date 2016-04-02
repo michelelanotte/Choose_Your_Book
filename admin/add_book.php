@@ -1,21 +1,22 @@
 <html>
   <head>
-    <?php
+    
+	<?php
 	  @session_start();
-      
-	  if ($_SESSION['logged_admin'] != true)
+      if ($_SESSION['logged_admin'] != true)
       {
-	    header("location: login.php");
-      }	
-	  
+	    header("location: ../login.php");
+      }		
       include("menu_admin.html");
     ?>
-	
+		
+	<link rel = "stylesheet" href = "../css/style_css.css" type = "text/css">
+	<meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
+  
   </head>
   <body style = ' background-color: #FFFF99'>
-    <link rel = "stylesheet" href = "style_css.css" type = "text/css">
 	<br>
-	<div id = 'container_admin'>
+	<div class = 'container_admin'>
 	  <form action = 'add_book.php' method = 'POST'>	    
 	    <b> Inserire titolo del libro: </b>
 		<br>
@@ -48,7 +49,7 @@
 	  </form>
       
 	  <?php
-        include("connect_database.php");
+        include("../connect_database.php");
 	    if((@$_POST['title'] != "") && (@$_POST['author'] != ""))
 	    {
 	      @$title = $_POST['title'];

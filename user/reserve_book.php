@@ -5,10 +5,10 @@
 	  @session_start();
 	  if ($_SESSION['logged_user'] != true)
 	  {
-	    header("location: login.php");
+	    header("location: ../login.php");
 	  } 
 	
-      include("connect_database.php");
+      include("../connect_database.php");
 	  $title = $_GET['title'];
 	  $username = $_SESSION['user'];
 	  $query = mysqli_query($conn, "SELECT * FROM books WHERE Title = '$title';");
@@ -18,7 +18,7 @@
 		$modify_availability = mysqli_query($conn, "UPDATE books SET Available = Available - 1 WHERE Title = '$title'");   
 		header("location: receipt.php?title=$title");
 		$data = time();
-        $data = date('Y-m-d H:i:s', $data);
+        $data = date('Y-m-d', $data);
 		$id = $book['ID'];
 		$insert_info = mysqli_query($conn, "INSERT INTO reservations(date, ID_book, username) 
 		  VALUES('$data', '$id', '$username');");

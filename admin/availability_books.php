@@ -8,11 +8,13 @@
       }		
   	  include("menu_admin.html"); 
 	?>
+	
+    <link rel = "stylesheet" href = "../css/style_css.css" type = "text/css">
+    <meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
   </head>
   <body style = ' background-color: #FFFF99'> 
-    <link rel = "stylesheet" href = "style_css.css" type = "text/css">
 	<br>
-	<div id = 'container_admin'>
+	<div class = 'container_admin'>
 	  <form action = 'availability_books.php' method = 'POST'>
 	    <br>
 	    <b> Inserire titolo del libro: </b>
@@ -41,7 +43,7 @@
 	  </form>
 
 	<?php
-      include("connect_database.php");
+      include("../connect_database.php");
 	  if((@$_POST['title'] != ""))
 	    {
 	      $title = $_POST['title'];

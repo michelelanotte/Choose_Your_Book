@@ -1,4 +1,4 @@
-#container {
+.container {
   text-align: center;
   width: 350px;
   height: 200px;
@@ -8,32 +8,26 @@
   margin: -100px 0 0 -120px; /*lato superiore, destro, inferiore, sinistro */
 }
 
-#access {
-  margin: -10px 0 0 -70px; 
-}
-
-#container2 {
+.container2 {
   width: 330px;
-  height: 560px;
+  height: 570px;
   position: absolute;
-  top: 28%;
+  top: 25%;
   left: 52%;
   margin: -110px 0 0 -175px;
   background-color: #FAEBD7 ;
 }
 
-#alternative {
-  margin: 5px 0 0 60px;
 }
 
-#background {
+.background {
   top: 100%;
   left: 100%;
   background-size: cover;
   
 }
 
-#container_admin {
+.container_admin {
   box-shadow: 15px 20px 40px #CCFFFF, /*dim orizzontale, dim verticale, raggio sfumatura, colore (linea) */ 
               -15px -20px 40px #CCFFFF,
                10px -20px 40px #CCFFFF, 
@@ -42,17 +36,15 @@
   background-color: #CCFFFF;
   position: absolute;
   text-align: center;
-  top: 25%;
-  left: 65%;
-  margin-top: -20px;
-  margin-left: -450px;
   border-color: #CCFFCC;
   border-style: solid;
   border-width: 0px;
   overflow: auto;
+  bottom: 300px;
+  left: 400px;
 }
 
-#container_admin2 {
+.container_admin2 {
   box-shadow: 15px 20px 40px #CCFFFF, /*dim orizzontale, dim verticale, raggio sfumatura, colore (linea) */ 
               -15px -20px 40px #CCFFFF,
                10px -20px 40px #CCFFFF, 
@@ -64,14 +56,14 @@
   top: 25%;
   left: 55%;
   margin-top: -20px;
-  margin-left: -450px;
+  margin-left: -440px;
   border-color: #CCFFCC;
   border-style: solid;
   border-width: 0px;
   overflow: auto;
 }
 
-#container_user {
+.container_user {
   box-shadow: 15px 20px 40px #CCFFFF, /*dim orizzontale, dim verticale, raggio sfumatura, colore (linea) */ 
               -15px -20px 40px #CCFFFF,
                10px -20px 40px #CCFFFF, 
@@ -90,7 +82,7 @@
   overflow: auto;
 }
 
-#title { 
+.title { 
     position: absolute;
   top: 1%;
   left: 35%; 
