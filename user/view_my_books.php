@@ -12,10 +12,11 @@
 	?>
 	
   </head>
-  <body style = ' background-color: #FFFF99'>
-    <link rel = "stylesheet" href = "../css/style_css.css" type = "text/css">
+  
+  <body class = 'body'>
+    <link rel = "stylesheet" href = "../css/style_user.css" type = "text/css">
 	<meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
-    <div class = 'container_admin2'>
+    <div class = 'viewUserBooks'>
 	  <form action = 'view_my_books.php' method = 'POST'>	    
 	    <b>	Cerca libro: </b>
         <br>
@@ -40,7 +41,7 @@
 		  @$title = $_POST['title'];
           $query = mysqli_query($conn, "SELECT r.ID, r.date, b.Title, b.Author FROM reservations r, books b 
 	        WHERE r.ID_book = b.ID AND r.username = '$username' AND Title LIKE '%$title%' ORDER BY r.date DESC, r.ID;");	  
-          while($row = mysqli_fetch_array($query)){
+          while($row = mysqli_fetch_array($query)) {
 	        echo "<tr>";
 		    echo "<td align = 'center'><h3>" . $row['ID'] . "</h3></td>";
 		    echo "<td align = 'center'>" . $row['Title'] . "</td>";

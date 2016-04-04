@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+		
+.col-1 {width: 10%; border-color: red; }
+.col-2 {width: 20%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33%;}
+.col-5 {width: 41%;}
+.col-6 {width: 86%;}
+.col-7 {width: 58%;}
+.col-8 {width: 66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83%;}
+.col-11 {width: 91%;}
+.col-12 {width: 100%;}
+
+    [class* = "col-"]
+	{
+      float: left;
+	}
+	
+.containerLogin {
+  text-align: center;
+  width: 350px;
+  height: 200px;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  margin: -100px 0 0 -120px; /*lato superiore, destro, inferiore, sinistro */
+}
+
+.background {
+  top: 100%;
+  left: 100%;
+  background-size: cover;  
+}
+
+.login {
+  height: 40px; 
+  width: 220px; 
+  height: 3em; 
+  border-radius: .5em;
+}
+
+.submit {
+  background-color: #66CC99; 
+  margin: 0px 9px 10px 5px; 
+  width: 16.5em; 
+  height: 3em; 
+  border-radius: .6em;
+}
+
+p {
+  margin: 2px 9px 10px 0px;
+}

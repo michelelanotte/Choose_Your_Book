@@ -1,12 +1,12 @@
 <html>
   <head>
-    <link rel = "stylesheet" href = "../css/style_admin.css" type = "text/css">
+    <link rel = "stylesheet" href = "css/style_user.css" type = "text/css">
 	<meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
   </head>
   
-  <body> 
-    <form action = 'reg_admin.php' method = 'POST'>
-	  <h2 align = 'center' style = ' color : #C0C0C0;'> <font size = '6' face = 'Courier'> &nbspCrea il tuo account </font> </h2>
+  <body>
+    <form action = 'registration.php' method = 'POST'>
+	  <h2 style = ' color : #C0C0C0 ' align = 'center' > <font size = '6' face = 'Courier'> &nbspCrea il tuo account </font> </h2>
 	  <div align = 'center' class = 'containerReg'>
         <br>
 		<b> Nome: </b>
@@ -61,16 +61,15 @@
 		<br>
         <b> *Password: (min 8 caratteri) </b> 
         <br>
-		<input size = 24 type = 'password' name = 'password'> 
+		<input size = 24 type = 'password' name = 'password' value = ""> 
 		<br>
 		<p>* campi obbligatori</p>
 		<br>
-		<input class = 'buttonReg' type = 'submit' value = 'Conferma iscrizione' name = 'invio'>  
-		<input class = 'buttonReg' type = 'button' value = 'Torna alla home' name = 'invio' onclick = "location.href = 'administrator.php'"> 
-        
-		<?php
-		  echo "<br><br><font size = 4 color = 'red'>" . @$_GET['failed'] . "</font>";
-	    ?>
+		<input class = 'submit' type = 'submit' value = 'Conferma iscrizione' name = 'invio'>  
+		<input class = 'submit' type = 'button' value = 'Torna al login' name = 'invio' onclick = "location.href = 'login.php'"> 
+		  <?php
+		  echo "<br><br><font size =4 color = 'red'>" . @$_GET['failed'] . "</font>";
+		  ?>
 	  </div>
 	</form>	  
   </body>

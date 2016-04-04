@@ -1,0 +1,12 @@
+.returnToView{
+display: none;
+}
+
+.printButton{
+	display:none;
+}
+
+.receipt{
+   position: absolute;
+   left: 15%;
+}

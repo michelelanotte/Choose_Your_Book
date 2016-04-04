@@ -4,8 +4,7 @@
   $password = "";
   $db = "manage_db";
   $conn = mysqli_connect($server, $username, $password, $db); 
-  if(!($conn))
-  {
+  if(!($conn)) {
     die ('Non riesco a connettermi: errore ');
   }
 ?>

@@ -3,17 +3,17 @@
   
     <?php
 	  @session_start();
-      if ($_SESSION['logged_admin'] != true)
-      {
+      if ($_SESSION['logged_admin'] != true) {
 	    header("location: ../login.php");
       }	
       include("menu_admin.html");
     ?>
 	
-  </head>
-  <body style = ' background-color: #FFFF99'>
-    <link rel = "stylesheet" href = "../css/style_css.css" type = "text/css">
+	<link rel = "stylesheet" href = "../css/style_admin.css" type = "text/css">
 	<meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
+  </head>
+  
+  <body class = 'body'>
 	<br>
 	  <div class = 'container_admin'>
 	    <form action = 'remove_book.php' method = 'POST'>
@@ -34,12 +34,12 @@
         <?php
 		  include("../connect_database.php");
           @$title = $_POST['title'];
-		  if((@$_POST['title'] != ""))
-	      {
+		  if((@$_POST['title'] != "")) {
 	        $remove = mysqli_query($conn, "DELETE  FROM books WHERE Title = '$title';");
 		    echo "<h3 align = center style = 'color: red'> Libro eliminato! </h3>";
           }  
         ?>
+		
       </div>
   </body>
 </html>

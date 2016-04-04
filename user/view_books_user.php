@@ -2,19 +2,19 @@
   <head>
     <?php
 	  @session_start();
-	  if ($_SESSION['logged_user'] != true)
-	  {
+	  if ($_SESSION['logged_user'] != true) {
 	    header("location: ../login.php");
 	  }
 	  include("menu_user.html"); 
     ?>
 	
-	<link rel = "stylesheet" href = "../css/style_css.css" type = "text/css">
+	<link rel = "stylesheet" href = "../css/style_user.css" type = "text/css">
 	<meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
   </head>
-  <body style = ' background-color: #FFFF99'> 
+  
+  <body class = 'body'> 
 	<br>
-	<div class = 'container_user'>
+	<div class = 'viewBooks'>
 	  
 	  <form action = 'view_books_user.php' method = 'POST'>	    
 	    <b>	Cerca libro: </b>
@@ -32,10 +32,8 @@
 		</select>
         <br>
 		<br>
-		<input style = 'background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
-		  type = 'submit' value = 'Invio' name = 'submit'>
-        <input style = 'background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
-		  type = 'button' value = 'Torna alla home' onclick = "location.href = 'homepage.php'">		  
+		<input class = 'button' type = 'submit' value = 'Invio'>
+        <input class = 'button' type = 'button' value = 'Torna alla home' onclick = "location.href = 'homepage.php'">		  
 	  </form>
 	  
 	  <table border = 1>
@@ -52,8 +50,7 @@
 		  @session_start();
 		  @$order = $_POST['order'];
 		  @$title = $_POST['title'];
-		  switch($order)
-			{
+		  switch($order) {
 			 case 1:  $find = mysqli_query($conn, "SELECT * FROM books WHERE Title LIKE '%$title%' ORDER BY ID;");
 			 break;
 			 
@@ -70,7 +67,7 @@
 			 break;
 			}
 			        
-	        while($row = mysqli_fetch_array($find)){
+	        while($row = mysqli_fetch_array($find)) {
 		      echo "<tr>";
 		      echo "<td align = 'center'><h3>" . $row['ID'] . "</h3></td>";
 		      echo "<td align = 'center'>" . $row['Title'] . "</td>";

@@ -1,10 +1,13 @@
 <html>
+  <head>
+    <link rel = "stylesheet" href = "css/style_user.css" type = "text/css">
+	<meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
+  </head>
+  
   <body>
     <form action = 'registration.php' method = 'POST'>
-	  <link rel = "stylesheet" href = "../css/style_css.css" type = "text/css">
-	  <meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
 	  <h2 style = ' color : #C0C0C0 ' align = 'center' > <font size = '6' face = 'Courier'> &nbspCrea il tuo account </font> </h2>
-	  <div align = 'center' class = 'container2'>
+	  <div align = 'center' class = 'containerReg'>
         <br>
 		<b> Nome: </b>
 		<br>		
@@ -62,8 +65,7 @@
 		<br>
 		<p>* campi obbligatori</p>
 		<br>
-		<input style = 'background-color: #3366CC; color: white; font-weight: bold; width: 11em; height: 3em; border-radius: .6em;' 
-		  type = 'submit' value = 'Conferma iscrizione' name = 'invio'">  
+		<input class = 'submit' type = 'submit' value = 'Conferma iscrizione' name = 'invio'>  
 		<input style = 'background-color: #3366CC; color: white; font-weight: bold; width: 11em; height: 3em; border-radius: .6em;' 
 		  type = 'button' value = 'Torna al login' name = 'invio' onclick = "location.href = '../login.php'"> 
 		  <?php

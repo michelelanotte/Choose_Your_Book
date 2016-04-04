@@ -1,10 +1,11 @@
 <html>
-  <body style = ' background-color: #FFFF99'>
+  <head>
+    <link rel = "stylesheet" href = "../css/style_user.css" type = "text/css">
+  <body class = 'body'>
     <?php
       include("menu_user.html");
 	  session_start();
-      if ($_SESSION['logged_user'] != true)
-	  {
+      if ($_SESSION['logged_user'] != true) {
         header("location: ../login.php");
       }
     ?>

@@ -8,3 +8,26 @@
         left: 400px;
 	  }
 	  
+.returnToView{
+  position: absolute; 
+  top: 640px; 
+  left:440px; 
+  background-color: #3366CC; 
+  color: white; 
+  font-weight: bold; 
+  width: 14em; 
+  height: 3em; 
+  border-radius: .9em;'
+}
+
+.printButton{
+  position: absolute; 
+  top: 640px; 
+  left:660px; 
+  background-color: #3366CC; 
+  color: white; 
+  font-weight: bold; 
+  width: 14em; 
+  height: 3em; 
+  border-radius: .9em;'
+}

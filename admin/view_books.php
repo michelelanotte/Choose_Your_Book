@@ -8,12 +8,14 @@
 	  }
       include("menu_admin.html");
     ?>
-  </head>
-  <body style = ' background-color: #FFFF99'> 
-    <link rel = "stylesheet" href = "../css/style_css.css" type = "text/css">
+	
+	<link rel = "stylesheet" href = "../css/style_admin.css" type = "text/css">
 	<meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
+  </head>
+  
+  <body class = 'body'> 
 	<br>
-	<div class = 'container_admin2'>
+	<div class = 'container_view'>
 	  
 	  <form action = 'view_books.php' method = 'POST'>	    
 	    <b>	Cerca libro: </b>
@@ -31,10 +33,8 @@
 		</select>
         <br>
 		<br>
-		<input style = 'background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
-		  type = 'submit' value = 'Invio'>
-        <input style = 'background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
-		  type = 'button' value = 'Torna alla home' onclick = "location.href = 'administrator.php'">		  
+		<input class = 'submit' type = 'submit' value = 'Invio'>
+        <input class = 'returnHomepageAdmin' type = 'button' value = 'Torna alla home' onclick = "location.href = 'administrator.php'">		  
 	  </form>
 	  
 	  <table border = 1>

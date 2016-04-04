@@ -1,16 +1,12 @@
 <?php
   include("../connect_database.php"); 
   session_start();
-  if ($_SESSION['logged_admin'] != true)
-  {
+  if ($_SESSION['logged_admin'] != true) {
     header("location: ../login.php");
   }
-  else
-  {
-	if((@$_POST['password'] != "") && (@$_POST['username'] != ""))
-	{
-      if(strlen($_POST['password']) > 7 && $_POST['username'] != NULL) 
-	  {
+  else {
+	if((@$_POST['password'] != "") && (@$_POST['username'] != "")) {
+      if(strlen($_POST['password']) > 7 && $_POST['username'] != NULL) {
         @$name = $_POST['name'];
         @$surname = $_POST['surname'];
         @$date = $_POST['date'];
@@ -29,13 +25,11 @@
         if($insert)  
           header("location: administrator.php");
 	  }
-      else
-	  {
+      else {
 	    header("location: reg_admin(html).php?failed=La password non <br> rispetta i requisiti!");
       }
     }
-	else
-	{
+	else {
 	  header("location: reg_admin(html).php?failed=Campi obbligatori vuoti!");
 	}
   }
