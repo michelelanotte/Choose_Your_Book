@@ -13,11 +13,10 @@
 	<meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
   </head>
   
-  <body class = 'body'>
+  <body>
 	<br>
 	  <div class = 'container_admin'>
 	    <form action = 'remove_book.php' method = 'POST'>
-	      <br>
 	      <br>
 		  <br>
 		  <b> Inserire titolo del libro da eliminare: </b>

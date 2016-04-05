@@ -1,5 +1,5 @@
-.body {
-  background-color: #FFFF99;
+body {
+  background-color: #E6E6FA;
 }
 
 .containerReg {
@@ -31,18 +31,16 @@
 }
 
 .viewBooks {
-  box-shadow: 15px 20px 40px #CCFFFF, /*dim orizzontale, dim verticale, raggio sfumatura, colore (linea) */ 
-              -15px -20px 40px #CCFFFF,
-               10px -20px 40px #CCFFFF, 
-              -10px  20px 40px #CCFFFF;
+  box-shadow: 20px 30px 60px #FFFFFF, /*dim orizzontale, dim verticale, raggio sfumatura, colore (linea) */ 
+              -20px -40px 40px #FFFFFF,
+               30px -30px 40px #FFFFFF, 
+              -20px  40px 40px #FFFFFF;
 			  
-  background-color: #CCFFFF;
+  background-color: #FFFFFF;
   position: absolute;
   text-align: center;
   top: 25%;
-  left: 45%;
-  margin-top: -20px;
-  margin-left: -450px;
+  left: 12%;
   border-color: #CCFFCC;
   border-style: solid;
   border-width: 0px;
@@ -50,26 +48,21 @@
 }
 
 .viewUserBooks {
-  box-shadow: 15px 20px 40px #CCFFFF, /*dim orizzontale, dim verticale, raggio sfumatura, colore (linea) */ 
-              -15px -20px 40px #CCFFFF,
-               10px -20px 40px #CCFFFF, 
-              -10px  20px 40px #CCFFFF;
+  box-shadow: 15px 20px 40px #FFFFFF, /*dim orizzontale, dim verticale, raggio sfumatura, colore (linea) */ 
+              -15px -20px 40px #FFFFFF,
+               20px -20px 40px #FFFFFF, 
+              -20px  20px 40px #FFFFFF;
 			  
-  background-color: #CCFFFF;
+  background-color: #FFFFFF;
   position: absolute;
   text-align: center;
   top: 25%;
   left: 55%;
   margin-top: -20px;
   margin-left: -440px;
-  border-color: #CCFFCC;
+  border-color: #FFFFFF;
   border-style: solid;
   border-width: 0px;
   overflow: auto;
 }
 
-.title { 
-    position: absolute;
-  top: 1%;
-  left: 35%; 
-}

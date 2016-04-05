@@ -8,5 +8,7 @@ display: none;
 
 .receipt{
    position: absolute;
-   left: 15%;
+   left: 13%;
+   border-width: 2px;
+   border-style: dashed;
 }

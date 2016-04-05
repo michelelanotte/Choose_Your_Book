@@ -4,7 +4,7 @@
 	<meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
   </head>
   
-  <body> 
+  <body style = 'background-color: white'> 
     <form action = 'reg_admin.php' method = 'POST'>
 	  <h2 align = 'center' style = ' color : #C0C0C0;'> <font size = '6' face = 'Courier'> &nbspCrea il tuo account </font> </h2>
 	  <div align = 'center' class = 'containerReg'>

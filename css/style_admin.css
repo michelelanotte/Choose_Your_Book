@@ -1,5 +1,5 @@
-.body {
-  background-color: #FFFF99;
+body {
+  background-color: #E6E6FA;
 }
 
 .yearSelection {
@@ -38,36 +38,34 @@
 }
 
 .container_admin {
-  box-shadow: 15px 20px 40px #CCFFFF, /*dim orizzontale, dim verticale, raggio sfumatura, colore (linea) */ 
-              -15px -20px 40px #CCFFFF,
-               10px -20px 40px #CCFFFF, 
-              -10px  20px 40px #CCFFFF;
+  box-shadow: 35px 25px 40px #FFFFFF, /*dim orizzontale, dim verticale, raggio sfumatura, colore (linea) */ 
+              -35px -25px 40px #FFFFFF,
+               30px -25px 40px #FFFFFF, 
+              -30px  25px 40px #FFFFFF;
 			  
-  background-color: #CCFFFF;
+  background-color: #FFFFFF;
   position: absolute;
   text-align: center;
-  border-color: #CCFFCC;
+  border-color: #FFFFFF;
   border-style: solid;
   border-width: 0px;
   overflow: auto;
-  bottom: 300px;
-  left: 400px;
+  top: 25%;
+  left: 30%;
 }
 
 .container_view {
-  box-shadow: 15px 20px 40px #CCFFFF, /*dim orizzontale, dim verticale, raggio sfumatura, colore (linea) */ 
-              -15px -20px 40px #CCFFFF,
-               10px -20px 40px #CCFFFF, 
-              -10px  20px 40px #CCFFFF;
+  box-shadow: 50px 95px 50px #FFFFFF, /*dim orizzontale, dim verticale, raggio sfumatura, colore (linea) */ 
+              -35px -35px 50px #FFFFFF,
+               45px -35px 50px #FFFFFF, 
+              -10px  20px 50px #FFFFFF;
 			  
-  background-color: #CCFFFF;
+  background-color: #FFFFFF;
   position: absolute;
   text-align: center;
   top: 25%;
-  left: 55%;
-  margin-top: -20px;
-  margin-left: -440px;
-  border-color: #CCFFCC;
+  left: 20%;
+  border-color: #FFFFFF;
   border-style: solid;
   border-width: 0px;
   overflow: auto;

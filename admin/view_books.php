@@ -13,7 +13,7 @@
 	<meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
   </head>
   
-  <body class = 'body'> 
+  <body> 
 	<br>
 	<div class = 'container_view'>
 	  
@@ -84,6 +84,7 @@
           mysqli_close($conn);
         ?>
       </table>
+	  <br>
     </div>
   </body>
 </html>  

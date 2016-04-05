@@ -12,7 +12,7 @@
 	<meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
   </head>
   
-  <body class = 'body'> 
+  <body> 
 	<br>
 	<div class = 'viewBooks'>
 	  
@@ -86,6 +86,7 @@
 		  echo "<font size =4 color = 'red'>" . @$_GET['failed'] . "</font><br><br>";
         ?>
       </table>
+	  <br>
     </div>
   </body>
 </html>  

@@ -3,7 +3,7 @@
     <link rel = "stylesheet" href = "../css/style_admin.css" type = "text/css">
   </head>
   
-  <body class = 'body'>
+  <body>
     
 	<?php
       include("menu_admin.html");
