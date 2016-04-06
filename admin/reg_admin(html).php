@@ -11,12 +11,12 @@
         <br>
 		<b> Nome: </b>
 		<br>		
-		<input size = 24 type = 'text' name = 'name'>
+		<input size = 24 type = 'text' name = 'name' placeholder = 'Nome'>
 		<br>
 		<br>		
 		<b> Cognome: </b>
 		<br>		
-		<input size = 24 type = 'text' name = 'surname'>
+		<input size = 24 type = 'text' name = 'surname' placeholder = 'Cognome'>
 		<br>
 		<br>
 		<b> Data di nascita: </b> 
@@ -42,7 +42,7 @@
 		<br>
         <b> Email: </b> 
 		<br>
-	    <input size = 24 type = 'email' name = 'email'> 
+	    <input size = 24 type = 'email' name = 'email' placeholder = 'esempio@hotmail.it'> 
 		<br>
 		<br>
 		<b> Sesso: </b> 
@@ -56,12 +56,12 @@
 		<br>
 		<b> *Username: </b> 
 		<br>
-		<input size = 24 type = 'text' name = 'username'> 
+		<input size = 24 type = 'text' name = 'username' placeholder = 'Username'> 
 		<br>
 		<br>
         <b> *Password: (min 8 caratteri) </b> 
         <br>
-		<input size = 24 type = 'password' name = 'password'> 
+		<input size = 24 type = 'password' name = 'password' placeholder = 'Password'> 
 		<br>
 		<p>* campi obbligatori</p>
 		<br>

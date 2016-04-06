@@ -16,12 +16,13 @@
       if($book['Available'] > 0)
 	  {
 		$modify_availability = mysqli_query($conn, "UPDATE books SET Available = Available - 1 WHERE Title = '$title'");   
-		header("location: receipt.php?title=$title");
 		$data = time();
-        $data = date('Y-m-d', $data);
+        $data = date('Y-m-d H:i:s');
 		$id = $book['ID'];
+		header("location: receipt.php?title=$title&data=$data");
 		$insert_info = mysqli_query($conn, "INSERT INTO reservations(date, ID_book, username) 
 		  VALUES('$data', '$id', '$username');");
+		
       }
       else{
 	    header("location: view_books_user.php?failed=Libro non disponibile!!");

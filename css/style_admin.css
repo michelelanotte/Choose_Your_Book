@@ -55,10 +55,10 @@ body {
 }
 
 .container_view {
-  box-shadow: 50px 95px 50px #FFFFFF, /*dim orizzontale, dim verticale, raggio sfumatura, colore (linea) */ 
-              -35px -35px 50px #FFFFFF,
-               45px -35px 50px #FFFFFF, 
-              -10px  20px 50px #FFFFFF;
+  box-shadow: 60px 95px 80px #FFFFFF, /*dim orizzontale, dim verticale, raggio sfumatura, colore (linea) */ 
+              -35px -35px 40px #FFFFFF,
+               50px -35px 30px #FFFFFF, 
+              -55px  90px 80px #FFFFFF;
 			  
   background-color: #FFFFFF;
   position: absolute;

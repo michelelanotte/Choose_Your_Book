@@ -19,7 +19,7 @@
 	  <form action = 'view_books_user.php' method = 'POST'>	    
 	    <b>	Cerca libro: </b>
         <br>
-        <input size = 40 type = 'text' name = 'title'>
+        <input size = 40 type = 'text' name = 'title' placeholder = 'Cerca'>
 	    <br>
 		<br>
 		<b>	Ordina per: </b>
@@ -49,7 +49,7 @@
 	      include("../connect_database.php");
 		  @session_start();
 		  @$order = $_POST['order'];
-		  @$title = $_POST['title'];
+		  @$title = trim(mysqli_real_escape_string($conn, $_POST['title']));
 		  switch($order) {
 			 case 1:  $find = mysqli_query($conn, "SELECT * FROM books WHERE Title LIKE '%$title%' ORDER BY ID;");
 			 break;

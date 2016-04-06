@@ -20,12 +20,12 @@
 	    <br>
 	    <b> Inserire titolo del libro: </b>
 	    <br>
-	    <input size = 60 type = 'text' name = 'title'>
+	    <input size = 60 type = 'text' name = 'title' placeholder = 'Titolo'>
 	    <br>
 	    <br>
 	    <b> Incrementa o decrementa disponibilit&agrave: </b>
 		<br>
-		<select class = 'availability'>
+		<select name = 'availability' class = 'availability'>
 		  <?php
             for($i = -20; $i < 21; $i++) {
 			  echo "<option value = " . $i . ">" . $i . "</option>";	
@@ -42,7 +42,7 @@
 	<?php
       include("../connect_database.php");
 	  if((@$_POST['title'] != "")) {
-	      $title = $_POST['title'];
+	      $title = trim(mysqli_real_escape_string($conn, $_POST['title']));
 	      $availability = $_POST['availability'];
 		  if($availability != 0)
 		  {

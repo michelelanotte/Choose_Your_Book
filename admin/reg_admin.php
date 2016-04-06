@@ -7,12 +7,13 @@
   else {
 	if((@$_POST['password'] != "") && (@$_POST['username'] != "")) {
       if(strlen($_POST['password']) > 7 && $_POST['username'] != NULL) {
-        @$name = $_POST['name'];
-        @$surname = $_POST['surname'];
+        @$name = trim(mysqli_real_escape_string($conn, $_POST['name']));
+        @$surname = trim(mysqli_real_escape_string($conn, $_POST['surname']));
+		@$surname = trim(mysqli_real_escape_string($conn, $surname));
         @$date = $_POST['date'];
         @$nation = $_POST['nation'];
-        @$email = $_POST['email'];
-        @$username = $_POST['username'];  
+        @$email = trim($_POST['email']);
+        @$username = trim(mysqli_real_escape_string($conn, $_POST['username']));  
         @$password = md5($_POST['password']);
         @$sex = $_POST['sex']; 
         $admin = true;	  

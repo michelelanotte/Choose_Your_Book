@@ -20,7 +20,7 @@
 	  <form action = 'view_my_books.php' method = 'POST'>	    
 	    <b>	Cerca libro: </b>
         <br>
-        <input size = 40 type = 'text' name = 'title'>
+        <input size = 40 type = 'text' name = 'title' placeholder = 'Cerca'>
 	    <br>
 		<br>
 		<input style = 'background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
@@ -38,7 +38,7 @@
         
 		<?php  
 	      $username = $_SESSION['user'];
-		  @$title = $_POST['title'];
+		  @$title = trim(mysqli_real_escape_string($conn, $_POST['title'])); 
           $query = mysqli_query($conn, "SELECT r.ID, r.date, b.Title, b.Author FROM reservations r, books b 
 	        WHERE r.ID_book = b.ID AND r.username = '$username' AND Title LIKE '%$title%' ORDER BY r.date DESC, r.ID;");	  
           while($row = mysqli_fetch_array($query)) {

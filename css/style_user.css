@@ -66,3 +66,9 @@ body {
   overflow: auto;
 }
 
+.home_user {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+

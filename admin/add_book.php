@@ -19,12 +19,12 @@
 	  <form action = 'add_book.php' method = 'POST'>	    
 	    <b> Inserire titolo del libro: </b>
 		<br>
-		<input size = 60 type = 'text' name = 'title'>
+		<input size = 60 type = 'text' name = 'title' placeholder = 'Titolo'>
         <br>
         <br>
         <b>	Inserire nome dell'autore: </b>
         <br>
-     	<input size = 60 type = 'text' name = 'author'>
+     	<input size = 60 type = 'text' name = 'author' placeholder = 'Autore'>
         <br>
         <br>
         <b>	Inserire data di pubblicazione: </b>
@@ -48,12 +48,12 @@
 	  <?php
         include("../connect_database.php");
 	    if((@$_POST['title'] != "") && (@$_POST['author'] != "")) {
-	      @$title = $_POST['title'];
+	      @$title = trim(mysqli_real_escape_string($conn, $_POST['title']));
 	      @$author = $_POST['author'];
 		  @$date = $_POST['year'];
 		
 	 	  @$insert =  mysqli_query($conn,"INSERT INTO books (Title,Author,Year_publication,Available) 
-		      VALUES ('$title','$author','$date', 1)");	 
+		      VALUES ('$title','$author','$date', 0)");	 
      
     	  $_POST['title'] = "";
           $_POST['author'] = "";

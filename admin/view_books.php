@@ -20,7 +20,7 @@
 	  <form action = 'view_books.php' method = 'POST'>	    
 	    <b>	Cerca libro: </b>
         <br>
-        <input size = 40 type = 'text' name = 'title'>
+        <input size = 40 type = 'text' name = 'title' placeholder = 'Cerca'>
 	    <br>
 		<br>
 		<b>	Ordina per: </b>
@@ -49,7 +49,7 @@
 	    <?php
 	      include("../connect_database.php");
 		  @$order = $_POST['order'];
-		  @$title = $_POST['title'];
+		  @$title = trim(mysqli_real_escape_string($conn, $_POST['title']));
          
 		 switch($order)
 			{

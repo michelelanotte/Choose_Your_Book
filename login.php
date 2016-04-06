@@ -5,7 +5,7 @@
 	<link rel = "stylesheet" href = "css/style_login.css" type = "text/css">
   </head>
   
-  <body class = 'background' background = 'sfondo_login.jpg'>
+  <body class = 'background' background = 'background_login.jpg'>
 	<form action = 'login.php' method = 'POST'>
 	  <br>	  
 	  <div class = 'containerLogin'>
