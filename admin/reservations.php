@@ -20,7 +20,7 @@
 	  <form action = 'reservations.php' method = 'POST'>
         <b> Cerca prenotazione: </b>
         <br>
-        <input size = 40 type = 'text' name = 'id' placeholder = 'Cerca ID'>
+        <input size = 40 type = 'text' name = 'id' placeholder = 'Cerca ID...'>
 	    <br>
 		<br>	  
 		<input class = 'submit' type = 'submit' value = 'Invio'>
@@ -47,8 +47,8 @@
 		    echo "<td align = 'center'><h3>" . $row['ID'] . "</h3></td>";
 		    echo "<td align = 'center'>" . $row['date'] . "</td>";
 		    echo "<td align = 'center'>" . $row['Title'] . "</td>";
-			echo "<td align = 'center'>" . $row['name'] . "</td>";
-		    echo "<td align = 'center'>" . $row['surname'] . "</td>";
+			echo "<td align = 'center'>" . ucfirst($row['name']) . "</td>";
+		    echo "<td align = 'center'>" . ucfirst($row['surname']) . "</td>";
 	      }
 	    
           mysqli_close($conn);

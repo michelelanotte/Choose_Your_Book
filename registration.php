@@ -2,8 +2,8 @@
   include("connect_database.php");
   if((@$_POST['password'] != "") && (@$_POST['username'] != ""))
     if(strlen($_POST['password']) > 7 && $_POST['username'] != NULL){  
-      @$name = trim(mysqli_real_escape_string($conn, $_POST['name']));
-      @$surname = trim(mysqli_real_escape_string($conn, $_POST['surname']));
+      @$name = ucfirst(trim(mysqli_real_escape_string($conn, $_POST['name'])));
+      @$surname = ucfirst(trim(mysqli_real_escape_string($conn, $_POST['surname'])));
       @$date = $_POST['date'];
       @$nation = $_POST['nation'];
       @$email = trim($_POST['email']);

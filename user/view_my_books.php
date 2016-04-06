@@ -20,7 +20,7 @@
 	  <form action = 'view_my_books.php' method = 'POST'>	    
 	    <b>	Cerca libro: </b>
         <br>
-        <input size = 40 type = 'text' name = 'title' placeholder = 'Cerca'>
+        <input size = 40 type = 'text' name = 'title' placeholder = 'Cerca...'>
 	    <br>
 		<br>
 		<input style = 'background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 

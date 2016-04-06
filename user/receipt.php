@@ -23,10 +23,10 @@
 		  echo "<font color = 'red' size = '5' style = 'position: absolute; top: 4px; left: 135px' ><b>DATI DELL'UTENTE:</b></font><br>";
 		  
 		  echo "<font size = 5 style = 'position: absolute; top: 40px; left: 130px' ><b>NOME:</b></font> 
-		    <font size = 4 style = 'position: absolute; top: 42px; left: 280px' >" . $user['name'] . "</font> <br>";
+		    <font size = 4 style = 'position: absolute; top: 42px; left: 280px' >" . ucfirst($user['name']) . "</font> <br>";
 		  
 		  echo "<font size = 5 style = 'position: absolute; top: 70px; left:75px' ><b>COGNOME:</b></font>
- 		    <font size = 4 style = 'position: absolute; top: 73px; left: 280px' >" . $user['surname'] . "</font><br>";
+ 		    <font size = 4 style = 'position: absolute; top: 73px; left: 280px' >" . ucfirst($user['surname']) . "</font><br>";
 		  
 		  echo "<font size = 5 style = 'position: absolute; top: 102.5px; left: 92.5px'><b>NAZIONE:</b></font> 
 		    <font size = 4 style = 'position: absolute; top: 105.5px; left: 280px' >" . $user['nation']. "</font><br>";
@@ -59,7 +59,7 @@
 		    <font size = 4 style = 'position: absolute; top: 355px; left: 280px' >" . $book_info['Year_publication'] . "</font><br>";
 			
 		  echo "<font size = 4 style = 'position: absolute; top: 395px; left: 162' ><b>AUTORE :</b></font>
-		    <font size = 4 style = 'position: absolute; top: 395px; left: 280px' >" . $book_info['Author'] . "</font><br>";
+		    <font size = 4 style = 'position: absolute; top: 395px; left: 280px' >" . ucfirst($book_info['Author']) . "</font><br>";
           
           echo "<font size = 4 style = 'position: absolute; top: 460px; left: 145px' ><b>DATA PRENOTAZIONE :</b></font>
             <font size = 4 style = 'position: absolute; top: 485px; left: 170px' >" . $data . "</font><br>";

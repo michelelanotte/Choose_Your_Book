@@ -53,12 +53,17 @@
 		      echo "<h3 align = center style = 'color: red'> Errore! </h3>";
 		    }
 		    else {
-	 	      @$modify =  mysqli_query($conn,"UPDATE books SET Available = Available + '$availability' WHERE Title = '$title'");	     
-    	      $_POST['title'] = "";
-              if($modify)	
-	            echo "<h3 align = center style = 'color: red'> Modifica effettuata! </h3>";
-		      else
-			    echo "<h3 align = center style = 'color: red'> Errore! </h3>"; 
+			  if(mysqli_num_rows($query) == 0){
+				echo "<h3 align = center style = 'color: red'> Libro non presente <br> nel database! </h3>";
+			  }
+			  else {
+	 	        @$modify =  mysqli_query($conn,"UPDATE books SET Available = Available + '$availability' WHERE Title = '$title'");	     
+    	        $_POST['title'] = "";
+                if($modify)	
+	              echo "<h3 align = center style = 'color: red'> Modifica effettuata! </h3>";
+		        else
+			      echo "<h3 align = center style = 'color: red'> Errore! </h3>"; 
+		      }
 		    }
 		  }
 		  else {

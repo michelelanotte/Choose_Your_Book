@@ -32,7 +32,7 @@
      	<select class = 'yearSelection' name = 'year'>
 		  <option value = 'default' select = 'selected'></option>	
           <?php
-		    for($i = 1950; $i < 2017; $i++)
+		    for($i = 1900; $i < 2017; $i++)
 			{
 			echo "<option value = " . $i . ">" . $i . "</option>";	
 			}
