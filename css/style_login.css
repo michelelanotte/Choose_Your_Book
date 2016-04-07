@@ -30,6 +30,36 @@
   margin: -100px 0 0 -120px; /*lato superiore, destro, inferiore, sinistro */
 }
 
+@media only screen and (max-width: 768px) {
+    [class = 'containerLogin'] {
+        position: absolute;
+		top: 45%;
+		left: 47%;
+        width: 80%;	
+        height: 50%;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    [class = 'containerLogin'] {
+        position: absolute;
+		top: 45%;
+		left: 50%;
+        width: 80%;	
+        height: 50%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    [class = 'containerLogin'] {
+        position: absolute;
+		top: 45%;
+		left: 53%;
+        width: 80%;	
+        height: 50%;
+    }
+}
+
 .background {
   top: 100%;
   left: 100%;
