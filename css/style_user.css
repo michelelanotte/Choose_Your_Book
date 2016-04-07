@@ -80,7 +80,7 @@ body {
 @media only screen and (max-width: 770px) {
     [class = 'home_user'] {
         position: absolute;
-		top: 50%;
+		top: 55%;
 		left: 1%;
 		width: 92%;
     }
@@ -89,27 +89,28 @@ body {
 @media only screen and (max-width: 770px) {
     [class = 'viewBooks'] {
         position: absolute;
-		top: 45%;
-		left: 6%;
-        width: 92%;		
+		top: 65%;
+		left: 2%;
+        width: 94%;		
     }
 }
 
 @media only screen and (max-width: 770px) {
     [class = 'viewUserBooks'] {
         position: absolute;
-		top: 50%;
-		left: 62%;
-        width: 92%;		
+		top: 65%;
+		left: 125%;
+        width: 94%;		
     }
 }
 
 @media only screen and (max-width: 768px) {
     [class = 'containerReg'] {
         position: absolute;
-		top: 35%;
-		left: 60%;
-        width: 75%;		
+		top: 37%;
+		left: 50%;
+        width: 95%;	
+        height: 105%;
     }
 }
 

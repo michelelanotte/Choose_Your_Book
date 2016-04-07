@@ -11,39 +11,42 @@
   </head>
   
   <body>
-    <br><font size = 4 align = 'left'> &nbsp Benvenuto, &nbsp Amministratore!</font>
+    <br><font size = 4 align = 'left'> Benvenuto, &nbsp Amministratore!</font>
     <div class = 'home_admin'>
 	<br>
 	<br>
 	  <h3 align = 'center-left' style = 'color: red'> Cosa pu&ograve l'amministratore? </h3>
 	  <font size = 4> L'amministratore del sito ha il compito di gestire il database dei libri e delle relative <br> 
-	  prenotazioni fatte dagli utenti. <br> Pu&ograve aggiungere nuovi libri alla lista di libri gi&agrave presenti, rimuovere
+	  prenotazioni fatte dagli utenti. <br> Pu&ograve aggiungere nuovi libri alla lista dei testi gi&agrave presenti, rimuovere
 	  un libro dal database, <br> modificare il numero di copie disponibili di un determinato libro, vedere tutti i libri<br>
-	  presenti all'interno del database, controllare le prenotazioni dei libri e registrare, se &egrave necessario.	  
+	  presenti all'interno del database, controllare le prenotazioni dei libri e registrare, <br> 
+	  se &egrave necessario, un altro amministratore.	  
 	  </font>
 	  <br>
 	  <br>
 	  <img src = "../user/library.jpg" alt = "biblioteca scolastica" width = "200" height = "150" />
-	  <a href = 'http://www.itisfermibarletta.it'><img style = "position: absolute; left: 35%;" src = "../user/school.jpg" alt = "biblioteca scolastica" width = "250" height = "150" /></a>
+	  <a href = 'http://www.itisfermibarletta.it'><img style = "position: absolute; left: 50%;" src = "../user/school.jpg" alt = "biblioteca scolastica" width = "200" height = "150" /></a>
 	  <br>
 	  <br>
 	  <br>
 	  <br>
 	  <h3 align = 'center-left' style = 'color: red'> A cosa serve la gestione della disponibilit&agrave dei libri? </h3>
-	  <font size = 4> Questa funzione &egrave utile quando in due casi: <br> 
-	  <br> -Se un libro dovesse subire danni(danni alla copertina, pagina strappata...), l'amministratore dovr&agrave <br> 
-	  &nbsp aggiornare subito il numero di copie disponibili di quel determinato libro, questo &egrave utile per evitare disguidi <br>
-	  &nbsp con l'utente(potrebbe prenotare un libro che in realt&agrave non &egrave disponibile in quanto soggetto a manutenzione). <br>
-	  &nbsp Ovviamente una volta riparato, il libro torner&agrave ad essere disponibile. <br><br>
-      -Una volta restituito il libro prestato, l'amministratore dovr&agrave rendere nuovamente disponibile quel libro. 	  
+	  <font size = 4> Questa funzione &egrave utile in due casi: <br> 
+	  <br> -Se un libro subisse dei danni,verrebbe temporaneamente eliminato dalla disponibilit&agrave <br> 
+	  &nbsp e il compito dell'amministratore in questo caso sarebbe quello di aggiornare <br> 
+	  &nbsp il numero copie presenti per evitare disguidi&nbsp con l'utente(potrebbe prenotare un libro <br>
+	  &nbsp che in realt&agrave non &egrave disponibile in quanto soggetto a manutenzione).
+	  <br> &nbsp Ovviamente una volta riparato, il libro torner&agrave ad essere disponibile e presente nuovamente nell'elenco.<br><br>
+      -A restituzione avvenuta, l'amministratore dovr&agrave rendere nuovamente disponibile quel libro. 	  
 	  </font>
       <br>
 	  <br>
 	  <br>
 	  <br>
 	  <h3 align = 'center-left' style = 'color: red'> Come accertarsi che la ricevuta presentata dall'utente per la prenotazione del libro sia autentica? </h3>
-	  <font size = 4> La ricevuta contiene informazioni relative all'utente, al libro e alla prenotazione, l'amministratore potr&agrave <br>
-	  cercare il codice della prenotazione nell'apposita pagina di ricerca, se i dati combaciano con quelli <br> 
+	  <font size = 4> La ricevuta contiene informazioni relative all'utente, al libro e alla prenotazione. <br>
+	  L'amministratore potr&agrave <br>
+	  cercare il codice della prenotazione nell'apposita pagina di ricerca, se i dati corrispondono con quelli <br> 
 	  presenti nella ricevuta, la stessa potr&agrave essere autenticata.
 	  <br>
 	  <br>
