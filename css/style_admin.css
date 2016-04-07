@@ -93,7 +93,7 @@ body {
 @media only screen and (max-width: 770px) {
     [class = 'container_view'] {
         position: absolute;
-		top: 100%;
+		top: 90%;
 		left: 5%;
         width: 90%;		
     }
