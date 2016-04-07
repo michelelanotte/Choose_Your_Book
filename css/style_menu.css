@@ -43,6 +43,11 @@ li a:hover
 .col-11 {width: 5%;}
 .col-12 {width: 100%;}
 
+.home_admin {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
 
 [class* = "col-"]
   {

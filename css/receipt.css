@@ -31,3 +31,29 @@
   height: 3em; 
   border-radius: .9em;'
 }
+
+@media only screen and (max-width: 768px) {
+    [class = 'receipt'] {
+        position: absolute;
+		top: 0%;
+		left: 0%;
+        width: 140%;
+		height: 110%;		
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    [class = 'returnToView'] {
+        position: absolute;
+		top: 112%;
+		left: 40%;		
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    [class = 'printButton'] {
+        position: absolute;
+		top: 119%;
+		left: 40%;		
+    }
+}
