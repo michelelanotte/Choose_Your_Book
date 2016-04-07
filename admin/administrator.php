@@ -13,6 +13,8 @@
   <body>
     <br><font size = 4 align = 'left'> &nbsp Benvenuto, &nbsp Amministratore!</font>
     <div class = 'home_admin'>
+	<br>
+	<br>
 	  <h3 align = 'center-left' style = 'color: red'> Cosa pu&ograve l'amministratore? </h3>
 	  <font size = 4> L'amministratore del sito ha il compito di gestire il database dei libri e delle relative <br> 
 	  prenotazioni fatte dagli utenti. <br> Pu&ograve aggiungere nuovi libri alla lista di libri gi&agrave presenti, rimuovere

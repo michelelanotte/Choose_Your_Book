@@ -108,3 +108,12 @@ body {
     }
 }
 
+@media only screen and (max-width: 770px) {
+    [class = 'home_admin'] {
+        position: absolute;
+		top: 70%;
+		left: 1%;
+		width: 92%;
+    }
+}
+
