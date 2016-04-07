@@ -72,3 +72,46 @@ body {
   left: 20%;
 }
 
+[class* = "col-"]
+  {
+    float: left;
+  }
+	
+@media only screen and (max-width: 768px) {
+    [class = 'home_user'] {
+        position: absolute;
+		top: 50%;
+		left: 1%;
+		width: 92%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    [class = 'viewBooks'] {
+        position: absolute;
+		top: 50%;
+		left: 3%;
+		width: 92%;	
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    [class = 'viewUserBooks'] {
+        position: absolute;
+		top: 50%;
+		left: 125%;
+        width: 92%;		
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    [class = 'containerReg'] {
+        position: absolute;
+		top: 35%;
+		left: 60%;
+        width: 70%;		
+    }
+}
+
+
+

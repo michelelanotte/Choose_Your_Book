@@ -80,3 +80,31 @@ body {
   margin: -110px 0 0 -175px;
   background-color: #FAEBD7 ;
 }
+
+@media only screen and (max-width: 770px) {
+    [class = 'container_admin'] {
+        position: absolute;
+		top: 80%;
+		left: 5%;
+        width: 90%;		
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    [class = 'container_view'] {
+        position: absolute;
+		top: 85%;
+		left: 5%;
+        width: 90%;		
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    [class = 'containerReg'] {
+        position: absolute;
+		top: 35%;
+		left: 60%;
+        width: 70%;		
+    }
+}
+
