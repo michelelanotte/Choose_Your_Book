@@ -21,7 +21,7 @@
 		  <br>
 		  <b> Inserire titolo del libro da eliminare: </b>
 		  <br>
-		  <input size = 60 type = 'text' name = 'title' placeholder = 'Titolo'>
+		  <input style = "width: 20em; height: 2.5em;  border-radius: .5em;" type = 'text' name = 'title' placeholder = 'Titolo'>
           <br>
           <br>
 		  <input style = 'background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
@@ -32,7 +32,7 @@
 	  
         <?php
 		  include("../connect_database.php");
-          @$title = trim(mysqli_real_escape_string($conn, $_POST['title']));
+          @$title = ucfirst(trim(mysqli_real_escape_string($conn, $_POST['title'])));
 		  if((@$_POST['title'] != "")) {
 	        $query = mysqli_query($conn, "SELECT * FROM books WHERE Title = '$title';");
 			if((mysqli_num_rows($query)) == 0 ){

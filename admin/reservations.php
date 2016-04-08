@@ -20,14 +20,14 @@
 	  <form action = 'reservations.php' method = 'POST'>
         <b> Cerca prenotazione: </b>
         <br>
-        <input size = 40 type = 'text' name = 'id' placeholder = 'Cerca ID...'>
+        <input style = "width: 20em; height: 2.5em; border-radius: .5em;" type = 'text' name = 'id' placeholder = 'Cerca ID...'>
 	    <br>
 		<br>	  
 		<input class = 'submit' type = 'submit' value = 'Invio'>
         <input class = 'returnHomepageAdmin' type = 'button' value = 'Torna alla home' onclick = "location.href = 'administrator.php'">		  
 	  </form>
 	  
-	  <table align = 'center' border = 1>
+	  <table cellpadding = '5px' style ='border-collapse: collapse' align = 'center' border = 1>
 	    <tr rowspan = 2>
 		  <td align = 'center' width = "15%" ><font size = 3 color = 'red' face = 'Lucida Calligraphy'> Codice <br> Prenotazione </font></td>
 		  <td align = 'center' width = "22%"><font size = 3 color = 'red' face = 'Lucida Calligraphy'> Data </font></td>

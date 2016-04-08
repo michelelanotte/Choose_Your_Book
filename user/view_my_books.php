@@ -20,7 +20,7 @@
 	  <form action = 'view_my_books.php' method = 'POST'>	    
 	    <b>	Cerca libro: </b>
         <br>
-        <input size = 40 type = 'text' name = 'title' placeholder = 'Cerca...'>
+        <input style = "width: 20em; height: 2.5em;  border-radius: .5em;" type = 'text' name = 'title' placeholder = 'Cerca...'>
 	    <br>
 		<br>
 		<input style = 'background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
@@ -28,7 +28,7 @@
         <input style = 'background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
 		  type = 'button' value = 'Torna alla home' onclick = "location.href = 'homepage.php'">		  
 	  </form>
-      <table align = 'center' border = 1>
+      <table cellpadding = '5px' style ='border-collapse: collapse' align = 'center' border = 1>
 	    <tr rowspan = 2>
 		  <td align = 'center'><font size = 4 color = 'red' face = 'Lucida Calligraphy'> Codice <br> prenotazione </td>
 		  <td align = 'center' width = "250px" > <font size = 3 color = 'red' face = 'Lucida Calligraphy'> Titolo libro </font></td>

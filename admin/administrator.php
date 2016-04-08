@@ -8,14 +8,15 @@
       }
     ?>
     <link rel = "stylesheet" href = "../css/style_admin.css" type = "text/css">
+	<meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
   </head>
   
   <body>
     <br><font size = 4 align = 'left'> Benvenuto, &nbsp Amministratore!</font>
-    <div class = 'home_admin'>
+    <div align = 'center' class = 'home_admin'>
 	<br>
 	<br>
-	  <h3 align = 'center-left' style = 'color: red'> Cosa pu&ograve l'amministratore? </h3>
+	  <h3 align = 'center' style = 'color: red'> Cosa pu&ograve fare l'amministratore? </h3>
 	  <font size = 4> L'amministratore del sito ha il compito di gestire il database dei libri e delle relative <br> 
 	  prenotazioni fatte dagli utenti. <br> Pu&ograve aggiungere nuovi libri alla lista dei testi gi&agrave presenti, rimuovere
 	  un libro dal database, <br> modificare il numero di copie disponibili di un determinato libro, vedere tutti i libri<br>
@@ -24,8 +25,7 @@
 	  </font>
 	  <br>
 	  <br>
-	  <img src = "../user/library.jpg" alt = "biblioteca scolastica" width = "200" height = "150" />
-	  <a href = 'http://www.itisfermibarletta.it'><img style = "position: absolute; left: 50%;" src = "../user/school.jpg" alt = "biblioteca scolastica" width = "200" height = "150" /></a>
+	  <img src = "../user/library.jpg" alt = "biblioteca scolastica" width = "250" height = "180" />
 	  <br>
 	  <br>
 	  <br>

@@ -2,12 +2,13 @@ body {
   background-color: #E6E6FA;
 }
 
-.containerReg {
-  width: 100%;
+.form-horizontal {
+  left: 38%;
+  width: 25%;
   position: absolute;
   top: 20%; 
   background-color: #FAEBD7 ;
-  overflow: auto;
+  height: auto;
 }
 
 .button {
@@ -77,33 +78,35 @@ body {
     [class = 'home_user'] {
         position: absolute;
 		top: 55%;
-		width: 100%;
+		width: 98%;
     }
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 768px) {
     [class = 'viewBooks'] {
         position: absolute;
-		top: 65%;
+		top: 60%;
+        width: 100%;		
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    [class = 'viewUserBooks'] {
+        position: absolute;
+		top: 60%;
         width: 100%;		
     }
 }
 
 @media only screen and (max-width: 770px) {
-    [class = 'viewUserBooks'] {
+    [class = 'form-horizontal'] {
         position: absolute;
-		top: 65%;
-        width: 100%;		
+		top: 35%;
+		left: 0%;
+		width: 100%;	
+        height: auto;
     }
 }
 
-@media only screen and (max-width: 320px) {
-    [class = 'containerReg'] {
-        position: absolute;
-		top: 40%;
-        width: 100%;	
-        overflow: auto;
-    }
-}
 
 

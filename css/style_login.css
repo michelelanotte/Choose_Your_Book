@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 		
-.col-1 {width: 10%; border-color: red; }
+.col-1 {width: 10%;}
 .col-2 {width: 20%;}
 .col-3 {width: 25%;}
 .col-4 {width: 33%;}
@@ -75,10 +75,10 @@
 
 .submit {
   background-color: #66CC99; 
-  margin: 0px 9px 10px 5px; 
-  width: 16.5em; 
+  margin: 0px 9px 10px -3px; 
+  width: 12em; 
   height: 3em; 
-  border-radius: .6em;
+  border-radius: .8em;
 }
 
 p {

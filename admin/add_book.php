@@ -19,17 +19,17 @@
 	  <form action = 'add_book.php' method = 'POST'>	    
 	    <b> Inserire titolo del libro: </b>
 		<br>
-		<input size = 60 type = 'text' name = 'title' placeholder = 'Titolo'>
+		<input style = "width: 20em; height: 2.5em;  border-radius: .5em;" type = 'text' name = 'title' placeholder = 'Titolo'>
         <br>
         <br>
         <b>	Inserire nome dell'autore: </b>
         <br>
-     	<input size = 60 type = 'text' name = 'author' placeholder = 'Autore'>
+     	<input style = "width: 20em; height: 2.5em;  border-radius: .5em;" type = 'text' name = 'author' placeholder = 'Autore'>
         <br>
         <br>
         <b>	Inserire data di pubblicazione: </b>
         <br>
-     	<select class = 'yearSelection' name = 'year'>
+     	<select style = "width: 15em; height: 2em;  border-radius: .5em;" name = 'year'>
 		  <option value = 'default' select = 'selected'></option>	
           <?php
 		    for($i = 1900; $i < 2017; $i++)
@@ -48,8 +48,8 @@
 	  <?php
         include("../connect_database.php");
 	    if((@$_POST['title'] != "") && (@$_POST['author'] != "")) {
-	      @$title = trim(mysqli_real_escape_string($conn, $_POST['title']));
-	      @$author = $_POST['author'];
+	      @$title = ucfirst(trim(mysqli_real_escape_string($conn, $_POST['title'])));
+	      @$author = ucfirst(trim(mysqli_real_escape_string($_POST['author'])));
 		  @$date = $_POST['year'];
 		
 	 	  @$insert =  mysqli_query($conn,"INSERT INTO books (Title,Author,Year_publication,Available) 

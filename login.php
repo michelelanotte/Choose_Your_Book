@@ -19,7 +19,7 @@
 		  <br> 
 		  <br>
 	      <input class = 'submit' type = 'submit' value = 'Accedi'> 	 
-		  <p><a href = "registration(html).php"><font color = 'red'> Non sei ancora iscritto? <br> Cosa aspetti, registrati! </font></p>
+		  <p><a style = ' text-decoration: none;' href = "registration(html).php"><font color = 'red'> Non sei ancora iscritto? <br> Cosa aspetti, registrati! </font></p>
 		</div>
       </div>
     </form>
