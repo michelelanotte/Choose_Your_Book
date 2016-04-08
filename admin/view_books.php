@@ -37,7 +37,7 @@
         <input class = 'returnHomepageAdmin' type = 'button' value = 'Torna alla home' onclick = "location.href = 'administrator.php'">		  
 	  </form>
 	  
-	  <table border = 1>
+	  <table align = 'center' border = 1>
 	    <tr rowspan = 2>
 		  <td><font size = 4 color = 'red' face = 'Lucida Calligraphy'> ID </td>
 		  <td align = 'center' width = "35%" > <font size = 3 color = 'red' face = 'Lucida Calligraphy'> Titolo </font></td>

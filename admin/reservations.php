@@ -27,7 +27,7 @@
         <input class = 'returnHomepageAdmin' type = 'button' value = 'Torna alla home' onclick = "location.href = 'administrator.php'">		  
 	  </form>
 	  
-	  <table border = 1>
+	  <table align = 'center' border = 1>
 	    <tr rowspan = 2>
 		  <td align = 'center' width = "15%" ><font size = 3 color = 'red' face = 'Lucida Calligraphy'> Codice <br> Prenotazione </font></td>
 		  <td align = 'center' width = "22%"><font size = 3 color = 'red' face = 'Lucida Calligraphy'> Data </font></td>
