@@ -20,12 +20,12 @@
 	  <form action = 'view_books.php' method = 'POST'>	    
 	    <b>	Cerca libro: </b>
         <br>
-        <input style = "width: 20em; height: 2.5em; border-radius: .5em;" type = 'text' name = 'title' placeholder = 'Cerca...'>
+        <input style = "border-width: 1px; width: 20em; height: 2.5em; border-radius: .5em;" type = 'text' name = 'title' placeholder = 'Cerca...'>
 	    <br>
 		<br>
 		<b>	Ordina per: </b>
 		<br>
-		<select style = "width: 15em; height: 2em; border-radius: .5em;" name = 'order'>
+		<select style = "background: white; width: 15em; height: 2.5em; border-radius: .5em;" name = 'order'>
 		  <option value = '1'> ID </option>
 		  <option value = '2'> Anno </option>
 		  <option value = '3'> Autore </option>
@@ -40,10 +40,10 @@
 	  <table cellpadding = '5px' style ='border-collapse: collapse' align = 'center' border = 1>
 	    <tr rowspan = 2>
 		  <td><font size = 4 color = 'red' face = 'Lucida Calligraphy'> ID </td>
-		  <td align = 'center' width = "35%" > <font size = 3 color = 'red' face = 'Lucida Calligraphy'> Titolo </font></td>
-		  <td align = 'center' width = "30%"><font size = 3 color = 'red' face = 'Lucida Calligraphy'> Autore </font></td>
-		  <td align = 'center'><font size = 3 color = 'red' face = 'Lucida Calligraphy'> Data <br> pubblicazione </font></td>
-		  <td align = 'center'><font size = 3 color = 'red' face = 'Lucida Calligraphy'> Disponibile </font></td>
+		  <td align = 'center' width = "35%" > <font class='field' size = 3 color = 'red' face = 'Lucida Calligraphy'> Titolo </font></td>
+		  <td align = 'center' width = "30%"><font class='field' size = 3 color = 'red' face = 'Lucida Calligraphy'> Autore </font></td>
+		  <td align = 'center'><font class='field' size = 3 color = 'red' face = 'Lucida Calligraphy'> Data <br> pubblicazione </font></td>
+		  <td align = 'center'><font class='field' size = 3 color = 'red' face = 'Lucida Calligraphy'> Disponibile </font></td>
 		</tr>
 		  
 	    <?php

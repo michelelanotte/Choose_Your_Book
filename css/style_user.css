@@ -18,6 +18,7 @@ body {
   width: 14em; 
   height: 3em; 
   border-radius: .9em;
+  border-width: 1px;
 }
 
 .submit {
@@ -25,7 +26,8 @@ body {
   color: white; 
   font-weight: bold; 
   width: 11em; 
-  height: 3em; 
+  height: 3em;
+  border-width: 1px;  
   border-radius: .6em;
 }
 
@@ -36,6 +38,7 @@ body {
               -20px  40px 40px #FFFFFF;
 			  
   background-color: #FFFFFF;
+  float: left;
   position: absolute;
   text-align: center;
   top: 25%;

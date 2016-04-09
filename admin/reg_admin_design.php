@@ -1,38 +1,39 @@
 <html>
   <head>
     <link rel = "stylesheet" href = "../css/style_admin.css" type = "text/css">
-	<link rel = "stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel = "stylesheet" href="../css/bootstrap.min.css">
 	<meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
   </head>
   
-  <body style = 'background-color: white'>
-    <form action = 'registration.php' method = 'POST'>
-	  <h2 style = ' color : #C0C0C0 ' align = 'center' > <font size = '6' face = 'Courier'> &nbspCrea il tuo account </font> </h2>
-	  <div align = 'center' class = 'form-horizontal'>
+  <body style = "background-color: white">
+    <form action = "reg_admin.php" method = 'POST'>
+	  <h2 style = "color : #C0C0C0" align = 'center' > <font size = '6' face = 'Courier'> &nbspCrea il tuo account </font> </h2>
+	  <div align = "center" class = 'form-horizontal' style="  left: 38%; width: 25%; position: absolute; top: 20%; 
+	      background-color: #FAEBD7 ; height: auto;">
         <br>
 		<b> Nome: </b>
 		<br>		
-		<input class="form-control" style = ' width: 250px;' type = 'text' name = 'name' placeholder = 'Nome'>
+		<input class = "form-control" style = "width: 250px;" type = 'text' name = 'name' placeholder = 'Nome'>
 		<br>
 		<br>		
 		<b> Cognome: </b>
 		<br>		
-		<input class="form-control"  style = ' width: 250px;' type = 'text' name = 'surname' placeholder = 'Cognome'>
+		<input class = "form-control"  style = "width: 250px;" type = 'text' name = 'surname' placeholder = 'Cognome'>
 		<br>
 		<br>
 		<b> Email: </b> 
 		<br>
-	    <input class="form-control" style = ' width: 250px;' type = 'email' name = 'email' placeholder = 'esempio@hotmail.it'> 
+	    <input class = "form-control" style = "width: 250px;" type = 'email' name = 'email' placeholder = 'esempio@hotmail.it'> 
 		<br>
 		<br>
 		<b> Data di nascita: </b> 
 		<br>
-		<input class="form-control" style = ' width: 200px;' align = 'center' type = 'date' name = 'date'> 
+		<input class = "form-control" style = "width: 200px;" align = 'center' type = 'date' name = 'date'> 
 		<br>
 		<br>		
 		<b> Paese: </b> 
 		<br>
-		<select class="form-control" style = ' width: 200px;' name = 'nation'>
+		<select class = "form-control" style = "width: 200px;" name = 'nation'>
           <option value = 'default' select = 'selected'>  </option>	
 		  <option value = 'Italia'> Italia </option>
 		  <option value = 'Franciara'> Francia </option>
@@ -48,7 +49,7 @@
 		<br>
 		<b> Sesso: </b> 
 		<br>		
-        <select class="form-control" style = ' width: 200px;' name = 'sex'>
+        <select class = "form-control" style = "width: 200px;" name = 'sex'>
           <option value = 'default' select = 'selected'>  </option>	
 		  <option value = 'male'> Maschio </option>
 		  <option value = 'female'> Femmina </option>
@@ -57,12 +58,12 @@
 		<br>
 		<b> *Username: </b> 
 		<br>
-		<input class="form-control" style = ' width: 250px;' type = 'text' name = 'username' placeholder = 'Username'> 
+		<input class = "form-control" style = "width: 250px;" type = 'text' name = 'username' placeholder = 'Username'> 
 		<br>
 		<br>
         <b> *Password: (min 8 caratteri) </b> 
         <br>
-		<input class="form-control" style = ' width: 250px;' type = 'password' name = 'password' value = "" placeholder = 'Password'> 
+		<input class = "form-control" style = "width: 250px;" type = 'password' name = 'password' value = "" placeholder = 'Password'> 
 		<br>
 		<p>* campi obbligatori</p>
 		<br>

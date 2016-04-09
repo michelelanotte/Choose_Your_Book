@@ -40,6 +40,7 @@
     }
 }
 
+
 @media only screen and (max-width: 360px) {
     [class = 'containerLogin'] {
         position: absolute;
@@ -60,6 +61,13 @@
     }
 }
 
+
+@media only screen and (max-width: 768px) {
+    [class = 'title'] {
+      font-family: 'Dancing Script', cursive;
+    }
+}
+
 .background {
   top: 100%;
   left: 100%;
@@ -69,16 +77,20 @@
 .login {
   height: 40px; 
   width: 220px; 
-  height: 3em; 
-  border-radius: .5em;
+  height: 2.5em;
+  border-width: 1px;
+  border-radius: .4em;
 }
 
 .submit {
-  background-color: #66CC99; 
+  background-color: #99CCFF; 
   margin: 0px 9px 10px -3px; 
   width: 12em; 
   height: 3em; 
-  border-radius: .8em;
+  border-width: 1px;
+  font-size: 15px;
+  color: white;
+  border-radius: .4em;
 }
 
 p {

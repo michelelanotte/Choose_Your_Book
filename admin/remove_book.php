@@ -21,12 +21,12 @@
 		  <br>
 		  <b> Inserire titolo del libro da eliminare: </b>
 		  <br>
-		  <input style = "width: 20em; height: 2.5em;  border-radius: .5em;" type = 'text' name = 'title' placeholder = 'Titolo'>
+		  <input style = "border-width: 1px; width: 20em; height: 2.5em;  border-radius: .5em;" type = 'text' name = 'title' placeholder = 'Titolo'>
           <br>
           <br>
-		  <input style = 'background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
+		  <input style = 'border-width: 1px; background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
 		    type = 'submit' value = 'Invio'> 
-		  <input style = 'background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
+		  <input style = 'border-width: 1px; background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
 		    type = 'button' value = 'Torna alla home' onclick = "location.href = 'administrator.php'"> 
 		</form>
 	  

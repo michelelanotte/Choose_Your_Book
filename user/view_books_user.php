@@ -19,12 +19,12 @@
 	  <form action = 'view_books_user.php' method = 'POST'>	    
 	    <b>	Cerca libro: </b>
         <br>
-        <input style = "width: 20em; height: 2.5em;  border-radius: .5em;" type = 'text' name = 'title' placeholder = 'Cerca...'>
+        <input style = "border-width: 1px; width: 20em; height: 2.5em;  border-radius: .5em;" type = 'text' name = 'title' placeholder = 'Cerca...'>
 	    <br>
 		<br>
 		<b>	Ordina per: </b>
 		<br>
-		<select style = "width: 20em; height: 2.5em;  border-radius: .5em;" name = 'order'>
+		<select style = "background: white; width: 20em; height: 2.5em;  border-radius: .5em;" name = 'order'>
 		  <option value = '1'> ID </option>
 		  <option value = '2'> Anno </option>
 		  <option value = '3'> Autore </option>

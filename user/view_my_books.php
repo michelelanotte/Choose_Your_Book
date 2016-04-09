@@ -20,12 +20,12 @@
 	  <form action = 'view_my_books.php' method = 'POST'>	    
 	    <b>	Cerca libro: </b>
         <br>
-        <input style = "width: 20em; height: 2.5em;  border-radius: .5em;" type = 'text' name = 'title' placeholder = 'Cerca...'>
+        <input style = "border-width: 1px; width: 20em; height: 2.5em;  border-radius: .5em;" type = 'text' name = 'title' placeholder = 'Cerca...'>
 	    <br>
 		<br>
-		<input style = 'background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
+		<input style = 'border-width: 1px; background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
 		  type = 'submit' value = 'Invio'>
-        <input style = 'background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
+        <input style = 'border-width: 1px; background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;' 
 		  type = 'button' value = 'Torna alla home' onclick = "location.href = 'homepage.php'">		  
 	  </form>
       <table cellpadding = '5px' style ='border-collapse: collapse' align = 'center' border = 1>

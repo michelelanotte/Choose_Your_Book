@@ -19,17 +19,17 @@
 	  <form action = 'add_book.php' method = 'POST'>	    
 	    <b> Inserire titolo del libro: </b>
 		<br>
-		<input style = "width: 20em; height: 2.5em;  border-radius: .5em;" type = 'text' name = 'title' placeholder = 'Titolo'>
+		<input style = "border-width: 1px; width: 20em; height: 2.5em;  border-radius: .5em;" type = 'text' name = 'title' placeholder = 'Titolo'>
         <br>
         <br>
         <b>	Inserire nome dell'autore: </b>
         <br>
-     	<input style = "width: 20em; height: 2.5em;  border-radius: .5em;" type = 'text' name = 'author' placeholder = 'Autore'>
+     	<input style = "border-width: 1px; width: 20em; height: 2.5em;  border-radius: .5em;" type = 'text' name = 'author' placeholder = 'Autore'>
         <br>
         <br>
         <b>	Inserire data di pubblicazione: </b>
         <br>
-     	<select style = "width: 15em; height: 2em;  border-radius: .5em;" name = 'year'>
+     	<select style = "background: white; width: 15em; height: 2.5em;  border-radius: .5em;" name = 'year'>
 		  <option value = 'default' select = 'selected'></option>	
           <?php
 		    for($i = 1900; $i < 2017; $i++)

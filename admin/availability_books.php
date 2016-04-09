@@ -20,12 +20,12 @@
 	    <br>
 	    <b> Inserire titolo del libro: </b>
 	    <br>
-	    <input style = "width: 20em; height: 2.5em;  border-radius: .5em;" type = 'text' name = 'title' placeholder = 'Titolo'>
+	    <input style = "border-width: 1px; width: 20em; height: 2.5em;  border-radius: .5em;" type = 'text' name = 'title' placeholder = 'Titolo'>
 	    <br>
 	    <br>
 	    <b> Incrementa o decrementa disponibilit&agrave: </b>
 		<br>
-		<select style = "width: 15em; height: 2em;  border-radius: .5em;" name = 'availability' class = 'availability'>
+		<select style = "background: white; width: 15em; height: 2.5em;  border-radius: .5em;" name = 'availability' class = 'availability'>
 		  <?php
             for($i = -20; $i < 21; $i++) {
 			  echo "<option value = " . $i . ">" . $i . "</option>";	

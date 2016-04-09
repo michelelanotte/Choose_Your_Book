@@ -20,7 +20,7 @@
 	  <form action = 'reservations.php' method = 'POST'>
         <b> Cerca prenotazione: </b>
         <br>
-        <input style = "width: 20em; height: 2.5em; border-radius: .5em;" type = 'text' name = 'id' placeholder = 'Cerca ID...'>
+        <input style = "border-width: 1px; width: 20em; height: 2.5em; border-radius: .5em;" type = 'text' name = 'id' placeholder = 'Cerca ID...'>
 	    <br>
 		<br>	  
 		<input class = 'submit' type = 'submit' value = 'Invio'>

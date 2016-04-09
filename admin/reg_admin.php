@@ -19,7 +19,7 @@
         $admin = true;	  
         $insert =  mysqli_query($conn,"INSERT INTO users (name,surname,date_birth,nation,email,sex,username,password,admin) 
 		  VALUES ('$name','$surname','$date','$nation','$email','$sex','$username','$password','$admin')") 
-          or header("location: reg_admin(html).php?failed=Username non disponibile!");		  
+          or header("location: reg_admin_design.php?failed=Username non disponibile!");		  
               
         $_POST['username'] = NULL;
         $_POST['password'] = NULL;		
@@ -27,11 +27,11 @@
           header("location: administrator.php");
 	  }
       else {
-	    header("location: reg_admin(html).php?failed=La password non <br> rispetta i requisiti!");
+	    header("location: reg_admin_design.php?failed=La password non <br> rispetta i requisiti!");
       }
     }
 	else {
-	  header("location: reg_admin(html).php?failed=Campi obbligatori vuoti!");
+	  header("location: reg_admin_design.php?failed=Campi obbligatori vuoti!");
 	}
   }
   mysqli_close($conn);	 
