@@ -16,7 +16,6 @@
       if($book['Available'] > 0)
 	  {
 		$modify_availability = mysqli_query($conn, "UPDATE books SET Available = Available - 1 WHERE Title = '$title'");   
-		$data = time();
         $data = date('Y-m-d H:i:s');
 		$id = $book['ID'];
 		header("location: receipt.php?title=$title&data=$data");

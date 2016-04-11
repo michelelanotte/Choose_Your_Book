@@ -1,14 +1,14 @@
-.returnToView{
-display: none;
+.returnToView {
+  display: none;
 }
 
-.printButton{
-	display:none;
+.printButton {
+  display:none;
 }
 
-.receipt{
-   position: absolute;
-   left: 13%;
-   border-width: 2px;
-   border-style: dashed;
+.receipt {
+  position: absolute;
+  left: 13%;
+  border-width: 2px;
+  border-style: dashed;
 }

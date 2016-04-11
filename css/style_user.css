@@ -1,16 +1,3 @@
-body {
-  background-color: #E6E6FA;
-}
-
-.form-horizontal {
-  left: 38%;
-  width: 25%;
-  position: absolute;
-  top: 20%; 
-  background-color: #FAEBD7 ;
-  height: auto;
-}
-
 .button {
   background-color: #3366CC; 
   color: white; 
@@ -19,6 +6,7 @@ body {
   height: 3em; 
   border-radius: .9em;
   border-width: 1px;
+  margin: 2px 0px 0px 0px;
 }
 
 .submit {
@@ -72,43 +60,53 @@ body {
   width: 100%;
 }
 
-[class* = "col-"]
-  {
-    float: left;
+.form-horizontal {
+   left: 38%; 
+   width: 25%; 
+   position: absolute; 
+   top: 20%; 
+   background-color: #FAEBD7; 
+   height: auto;
+}
+
+@media only screen and (max-width: 840px) {
+  [class="home_user"] {
+    position: absolute;
+	top: 55%;
+	width: 98%;
   }
-	
-@media only screen and (max-width: 770px) {
-    [class = 'home_user'] {
-        position: absolute;
-		top: 55%;
-		width: 98%;
-    }
 }
 
 @media only screen and (max-width: 768px) {
-    [class = 'viewBooks'] {
-        position: absolute;
-		top: 60%;
-        width: 100%;		
-    }
+  [class="viewBooks"] {
+    position: absolute;
+	top: 63%;
+    width: 100%;		
+  }
 }
 
 @media only screen and (max-width: 768px) {
-    [class = 'viewUserBooks'] {
-        position: absolute;
-		top: 60%;
-        width: 100%;		
-    }
+  [class="viewUserBooks"] {
+    position: absolute;
+	top: 63%;
+    width: 100%;		
+  }
 }
 
 @media only screen and (max-width: 770px) {
-    [class = 'form-horizontal'] {
-        position: absolute;
-		top: 35%;
-		left: 0%;
-		width: 100%;	
-        height: auto;
-    }
+  [class="form-horizontal"] {
+    position: absolute;
+	top: 35%;
+	left: 0%;
+	width: 100%;	
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  [class="display"] {
+    width: 100%;
+  }
 }
 
 
