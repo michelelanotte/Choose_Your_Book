@@ -78,8 +78,11 @@
 		      else
 			    echo "<td align='center'> Non disponibile </td>";
 			
-			  $title = $row['Title']; 
-			  echo "<td align='center'><a href='reserve_book.php?title=$title'> Prenota ora! </a></td></tr>";		  
+			  $title = $row['Title'];
+			  echo "<td align='center'><a href='reserve_book.php?title=$title'> Prenota ora! </a></td>";
+			  $name_file = $row['Name_File'];
+			  if($name_file != NULL)
+                echo "<td align='center'><a href='download_book.php?file=$name_file'> Vedi anteprima! </a></td></tr>";			  
 	        }
 	  
           mysqli_close($conn);

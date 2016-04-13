@@ -16,7 +16,7 @@
   <body class="display" style="background-color: #E6E6FA;">
 	<br>
 	<div class="container_admin">
-	  <form action="add_book.php" method='POST' enctype="multipart/form-data">	    
+	  <form action="add_book.php" method='POST'>	    
 	    <b> Inserire titolo del libro: </b>
 		<br>
 		<input style="border-width: 1px; width: 20em; height: 2.5em; border-radius: .5em;" type="text" name="title" placeholder='Titolo'>
@@ -41,27 +41,19 @@
 		</select>
         <br>
         <br>
-		<input type="file" name="file">
-		<br>
-		<br>
 		<input class="submit" type="submit" value="Invio"> 
 		<input class="returnHomepageAdmin" type="button" value="Torna alla home" onclick="location.href='administrator.php'"> 
 	  </form>
       
 	  <?php
         include("../connect_database.php");
-        include("../connect_database.php");
 	    if((@$_POST['title'] != "") && (@$_POST['author'] != "")) {
 	      @$title = ucfirst(trim(mysqli_real_escape_string($conn, $_POST['title'])));
-	      @$author = ucfirst(trim(mysql_real_escape_string($_POST['author'])));
+	      @$author = ucfirst(trim(mysqli_real_escape_string($_POST['author'])));
 		  @$date = $_POST['year'];
-		  @$name_pdf_temp = $_FILES['file']["tmp_name"];
-		  @$name_pdf = $_FILES['file']['name'];
-		  @$type_pdf = $_FILES['file']['type'];
-		  @$pdf = addslashes(file_get_contents($name_pdf_temp));
 		
-	 	  @$insert =  mysqli_query($conn,"INSERT INTO books (Title,Author,Year_publication,Available,File,Name_File,Type_File) 
-		      VALUES ('$title','$author','$date',0,'$pdf','$name_pdf','$type_pdf')");	 
+	 	  @$insert =  mysqli_query($conn,"INSERT INTO books (Title,Author,Year_publication,Available) 
+		      VALUES ('$title','$author','$date', 0)");	 
      
     	  $_POST['title'] = "";
           $_POST['author'] = "";
@@ -78,5 +70,4 @@
     </div>
   </body>
 </html>
-
 

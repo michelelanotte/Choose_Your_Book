@@ -15,7 +15,7 @@
   
   <body class="display" style="background-color: #E6E6FA;"> 
 	<br>
-	<div class "container_view">
+	<div class="container_view">
 	  
 	  <form action="view_books.php" method="POST">	    
 	    <b>	Cerca libro: </b>
