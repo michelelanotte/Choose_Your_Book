@@ -13,12 +13,12 @@
 	      <font class="title" size=6 color='white' face='Lucida Calligraphy'> LOGIN: </font> 
 		  <br>
 		  <br>
-          <input style="width: 220px; height: 2.5em; border-width: 0.5px; border-radius: .4em;" type="text" name="username" placeholder='Username'>
+          <input style="outline: none; width: 220px; height: 2.5em; border-width: 0.5px; border-radius: .4em;" type="text" name="username" placeholder='Username'>
           <br> 		   
-		  <input style="width: 220px; height: 2.5em; border-width: 0.1px; border-radius: .4em;" type="password" name="password" placeholder='Password'>
+		  <input style="outline: none; width: 220px; height: 2.5em; border-width: 0.1px; border-radius: .4em;" type="password" name="password" placeholder='Password'>
 		  <br> 
 		  <br>
-	      <input class="submit" type="submit" value='Accedi'> 	 
+	      <input style="outline: none;" class="submit" type="submit" value='Accedi'> 	 
 		  <p style="margin: 2px 9px 10px 0px;"><a style="text-decoration: none;" href="registration_html.php">
 		      <font color='red'> &nbsp Non sei ancora iscritto? <br> Cosa aspetti, registrati! </font></p>
 		</div>

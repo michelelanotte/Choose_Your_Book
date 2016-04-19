@@ -78,7 +78,7 @@
 	  ?>
 	  
 	</div>
-    <input class="returnToView" type="button" value="Torna indietro" onclick="location.href='view_books_user.php?failed='">
-	<input class="printButton" type="button" value="Stampa ricevuta" onClick="window.print()">
+    <input style="outline: none;" class="returnToView" type="button" value="Torna indietro" onclick="location.href='view_books_user.php?failed='">
+	<input style="outline: none;" class="printButton" type="button" value="Stampa ricevuta" onClick="window.print()">
   </body>
 </html>  

@@ -2,8 +2,7 @@ ul {
   list-style-type: none;
   margin: 0px;
   padding: 0px;
-  overflow: auto;
-  
+  overflow: auto; 
   background-color: #333;
 }
 
@@ -38,12 +37,6 @@ li a:hover {
 .col-10 {width: 4%;}
 .col-11 {width: 4%;}
 .col-12 {width: 100%;}
-
-.home_admin {
-  position: absolute;
-  top: 20%;
-  left: 20%;
-}
 
 [class*="col-"]
   {

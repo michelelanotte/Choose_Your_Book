@@ -1,9 +1,8 @@
 .home_admin {
   position: absolute;
   top: 13%;
-  width: 60%;
+  width: 100%;
 }
-
 
 .buttonReg {
   background-color: #3366CC; 
@@ -42,26 +41,26 @@
               -30px  25px 40px #FFFFFF;
 			  
   background-color: #FFFFFF;
-  position: absolute;
+  position: relative;
   text-align: center;
   border-color: #FFFFFF;
   border-style: solid;
   border-width: 0px;
   overflow: auto;
-  top: 25%;
-  width: 100%
+  top: 20vh;
+  width: 100%;
 }
 
 .container_view {
-  box-shadow: 60px 95px 80px #FFFFFF, /*dim orizzontale, dim verticale, raggio sfumatura, colore (linea) */ 
-              -35px -35px 40px #FFFFFF,
-               50px -35px 30px #FFFFFF, 
-              -55px  90px 80px #FFFFFF;
+  box-shadow: 35px 25px 40px #FFFFFF, /*dim orizzontale, dim verticale, raggio sfumatura, colore (linea) */ 
+              -35px -25px 40px #FFFFFF,
+               30px -25px 40px #FFFFFF, 
+              -30px  25px 40px #FFFFFF;
 			  
   background-color: #FFFFFF;
-  position: absolute;
+  position: relative;
   text-align: center;
-  top: 25%;
+  top: 20vh;
   width: 100%;
   border-color: #FFFFFF;
   border-style: solid;
@@ -72,31 +71,31 @@
 .form-horizontal {
   left: 38%;
   width: 25%;
-  position: absolute;
+  position: relative;
   top: 20%; 
   height: auto;
 }
   
 @media only screen and (max-width: 770px) {
   [class="container_admin"] {
-    position: absolute;
-	top: 93%;
+    position: relative;
+	top: 15vh;
     width: 100%;		
   }
 }
 
 @media only screen and (max-width: 770px) {
   [class="container_view"] {
-    position: absolute;
-	top: 93%;
+    position: relative;
+	top: 15vh;
     width: 100%;		
   }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 880px) {
   [class="form-horizontal"] {
-    position: absolute;
-	top: 35%;
+    position: relative;
+	top: 20%;
 	left: 0%;
 	width: 100%;	
     height: auto;
@@ -106,15 +105,14 @@
 @media only screen and (max-width: 840px) {
   [class="home_admin"] {
     position: absolute;
-	top: 85%;
+	top: 70vh;
 	left: 1%;
-	width: 92%;
+	width: auto;
   }
 }
 
-@media only screen and (max-width: 770px) {
-  [class = 'display'] {
+.display {
     width: 100%;
-  }
+	margin: 0px;
 }
 

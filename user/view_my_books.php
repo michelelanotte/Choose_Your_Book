@@ -15,15 +15,15 @@
     <link rel="stylesheet" href="../css/style_user.css" type="text/css">
 	<meta name= "viewport" content="width=device-width, initial-scale=1.0">
     <div class="viewUserBooks">
-	  <form action="view_my_books.php" method = 'POST'>	    
+	  <form action= <?php echo $_SERVER['PHP_SELF'] ?> method = 'POST'>	    
 	    <b>	Cerca libro: </b>
         <br>
-        <input style="border-width: 1px; width: 20em; height: 2.5em; border-radius: .5em;" type="text" name="title" placeholder='Cerca...'>
+        <input style="outline: none; border-width: 1px; width: 20em; height: 2.5em; border-radius: .5em;" type="text" name="title" placeholder='Cerca...'>
 	    <br>
 		<br>
-		<input style="border-width: 1px; background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;" 
+		<input style="outline: none; border-width: 1px; background-color: #3366CC; color: white; font-weight: bold; width: 14em; height: 3em; border-radius: .9em;" 
 		    type="submit" value="Invio">
-        <input style="margin: 2px 0px 0px 0px; border-width: 1px; background-color: #3366CC; color: white; 
+        <input style="outline: none; margin: 2px 0px 0px 0px; border-width: 1px; background-color: #3366CC; color: white; 
 		    font-weight: bold; width: 14em; height: 3em; border-radius: .9em;" 
 		    type="button" value="Torna alla home" onclick="location.href='homepage.php'">		  
 	  </form>

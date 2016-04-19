@@ -16,16 +16,15 @@
   <body class="display" style="background-color: #E6E6FA;"> 
 	<br>
 	<div class="container_admin">
-	  <form action="availability_books.php" method='POST'>
-	    <br>
+	  <form action= <?php echo $_SERVER['PHP_SELF'] ?> method='POST'>
 	    <b> Inserire titolo del libro: </b>
 	    <br>
-	    <input style="border-width: 1px; width: 20em; height: 2.5em;  border-radius: .5em;" type="text" name="title" placeholder='Titolo'>
+	    <input style="outline: none; border-width: 1px; width: 20em; height: 2.5em;  border-radius: .5em;" type="text" name="title" placeholder='Titolo'>
 	    <br>
 	    <br>
 	    <b> Incrementa o decrementa disponibilit&agrave: </b>
 		<br>
-		<select class="availability" style="background: white; width: 10em; height: 2.5em;  border-radius: .5em;" name="availability">
+		<select class="availability" style="outline: none; background: white; width: 10em; height: 2.5em;  border-radius: .5em;" name="availability">
 		  <?php
             for($i = -20; $i < 21; $i++) {
 			  echo "<option value = " . $i . ">" . $i . "</option>";	
@@ -35,13 +34,14 @@
 		  
 	    <br>
 	    <br>
-	    <input class="submit" type="submit" value="Invio"> 
-	    <input class="returnHomepageAdmin" type="button" value="Torna alla home" onclick="location.href = 'administrator.php'"> 
+	    <input style="outline: none;" class="submit" name="submit" type="submit" value="Invio"> 
+	    <input style="outline: none;" class="returnHomepageAdmin" type="button" value="Torna alla home" onclick="location.href = 'administrator.php'"> 
 	  </form>
 
 	<?php
       include("../connect_database.php");
-	  if((@$_POST['title'] != "")) {
+	  if(isset($_POST['submit'])) {
+	    if((@$_POST['title'] != "")) {
 	      $title = ucfirst(trim(mysqli_real_escape_string($conn, $_POST['title'])));
 	      $availability = $_POST['availability'];
 		  if($availability != 0)
@@ -70,6 +70,10 @@
             echo "<h3 align=center style='color: red'> Errore! </h3>"; 
 		  }			
 	    }
+		else {
+		   echo "<h3 align=center style='color: red'> Inserire titolo del libro! </h3>"; 
+		}
+	  }
 	    mysqli_close($conn);
 ?>
 </body>

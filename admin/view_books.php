@@ -14,18 +14,17 @@
   </head>
   
   <body class="display" style="background-color: #E6E6FA;"> 
-	<br>
 	<div class="container_view">
 	  
-	  <form action="view_books.php" method="POST">	    
+	  <form action= <?php echo $_SERVER['PHP_SELF'] ?> method="POST">	    
 	    <b>	Cerca libro: </b>
         <br>
-        <input style="border-width: 1px; width: 20em; height: 2.5em; border-radius: .5em;" type="text" name="title" placeholder="Cerca...">
+        <input style="outline: none; border-width: 1px; width: 20em; height: 2.5em; border-radius: .5em;" type="text" name="title" placeholder="Cerca...">
 	    <br>
 		<br>
 		<b>	Ordina per: </b>
 		<br>
-		<select style="background: white; width: 10em; height: 2.5em; border-radius: .5em;" name="order">
+		<select style="outline: none;background: white; width: 10em; height: 2.5em; border-radius: .5em;" name="order">
 		  <option value="1"> ID </option>
 		  <option value="2"> Anno </option>
 		  <option value="3"> Autore </option>
@@ -33,8 +32,8 @@
 		</select>
         <br>
 		<br>
-		<input class="submit" type="submit" value="Invio">
-        <input class="returnHomepageAdmin" type="button" value="Torna alla home" onclick="location.href='administrator.php'">		  
+		<input style="outline: none;" class="submit" type="submit" value="Invio">
+        <input style="outline: none;" class="returnHomepageAdmin" type="button" value="Torna alla home" onclick="location.href='administrator.php'">		  
 	  </form>
 	  
 	  <table cellpadding='5px' style="border-collapse: collapse" align='center' border=1>

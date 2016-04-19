@@ -66,8 +66,8 @@
 		<br>
 		<p>* campi obbligatori</p>
 		<br>
-		<input class="buttonReg" type="submit" value="Conferma iscrizione" name="invio">  
-		<input class="buttonReg" type="button" value="Torna alla home" name="invio" onclick="location.href='administrator.php'"> 
+		<input style="outline: none;" class="buttonReg" type="submit" value="Conferma iscrizione" name="invio">  
+		<input style="outline: none;" class="buttonReg" type="button" value="Torna alla home" name="invio" onclick="location.href='administrator.php'"> 
         
 		<?php
 		  echo "<br><br><font size=4 color='red'>" . @$_GET['failed'] . "</font>";

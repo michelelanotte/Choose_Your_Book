@@ -20,16 +20,16 @@
 }
 
 .viewBooks {
-  box-shadow: 20px 30px 60px #FFFFFF, /*dim orizzontale, dim verticale, raggio sfumatura, colore (linea) */ 
-              -20px -40px 40px #FFFFFF,
-               30px -30px 40px #FFFFFF, 
-              -20px  40px 40px #FFFFFF;
+  box-shadow: 35px 25px 40px #FFFFFF, /*dim orizzontale, dim verticale, raggio sfumatura, colore (linea) */ 
+              -35px -25px 40px #FFFFFF,
+               30px -25px 40px #FFFFFF, 
+              -30px  25px 40px #FFFFFF;
 			  
   background-color: #FFFFFF;
   float: left;
-  position: absolute;
+  position: relative;
   text-align: center;
-  top: 25%;
+  top: 20vh;
   width: 100%;
   border-color: #CCFFCC;
   border-style: solid;
@@ -38,15 +38,16 @@
 }
 
 .viewUserBooks {
-  box-shadow: 15px 20px 40px #FFFFFF, /*dim orizzontale, dim verticale, raggio sfumatura, colore (linea) */ 
-              -15px -20px 40px #FFFFFF,
-               20px -20px 40px #FFFFFF, 
-              -20px  20px 40px #FFFFFF;
+  box-shadow: 35px 25px 40px #FFFFFF, /*dim orizzontale, dim verticale, raggio sfumatura, colore (linea) */ 
+              -35px -25px 40px #FFFFFF,
+               30px -25px 40px #FFFFFF, 
+              -30px  25px 40px #FFFFFF;
 			  
   background-color: #FFFFFF;
-  position: absolute;
+  float: left;
+  position: relative;
   text-align: center;
-  top: 25%;
+  top: 20vh;
   width: 100%;
   border-color: #FFFFFF;
   border-style: solid;
@@ -63,7 +64,7 @@
 .form-horizontal {
    left: 38%; 
    width: 25%; 
-   position: absolute; 
+   position: relative; 
    top: 20%; 
    background-color: #FAEBD7; 
    height: auto;
@@ -72,42 +73,42 @@
 @media only screen and (max-width: 840px) {
   [class="home_user"] {
     position: absolute;
-	top: 55%;
-	width: 98%;
+	top: 40vh;
+	width: auto;
   }
 }
 
 @media only screen and (max-width: 768px) {
   [class="viewBooks"] {
-    position: absolute;
-	top: 63%;
+    position: relative;
+	top: 16vh;
     width: 100%;		
   }
 }
 
 @media only screen and (max-width: 768px) {
   [class="viewUserBooks"] {
-    position: absolute;
-	top: 63%;
+    position: relative;
+	top: 16vh;
     width: 100%;		
   }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 880px) {
   [class="form-horizontal"] {
-    position: absolute;
-	top: 35%;
+    position: relative;
+	top: 20%;
 	left: 0%;
 	width: 100%;	
     height: auto;
   }
 }
 
-@media only screen and (max-width: 1024px) {
-  [class="display"] {
+.display {
     width: 100%;
-  }
+	margin: 0px;
 }
+
 
 
 
