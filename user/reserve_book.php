@@ -1,6 +1,6 @@
 <html>
   <body>
-    
+    <!-- this passage is very important to pass information to the receipt(like hour and date) and change the availability
 	<?php
 	  @session_start();
 	  if ($_SESSION['logged_user'] != true)

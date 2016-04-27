@@ -57,12 +57,12 @@
 		<br>
 		<b> *Username: </b> 
 		<br>
-		<input class="form-control" style="width: 250px;" type="text" name="username" placeholder="Username"> 
+		<input class="form-control" style="width: 250px;" type="text" name="username" placeholder="Username" required> 
 		<br>
 		<br>
         <b> *Password: (min 8 caratteri) </b> 
         <br>
-		<input class="form-control" style="width: 250px;" type="password" name="password" value="" placeholder="Password"> 
+		<input class="form-control" style="width: 250px;" type="password" name="password" value="" placeholder="Password" required> 
 		<br>
 		<p>* campi obbligatori</p>
 		<br>

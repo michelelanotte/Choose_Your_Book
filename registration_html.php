@@ -10,14 +10,14 @@
 	  <h2 style="color : #C0C0C0" align='center'> <font size='6' face='Courier'> &nbspCrea il tuo account </font> </h2>
 	  <div align='center' class="form-horizontal" style="background-color: #FAEBD7">
         <br>
-		<b> Nome: </b>
+		<b> *Nome: </b>
 		<br>		
-		<input class="form-control" style="width: 250px;" type="text" name="name" placeholder="Nome">
+		<input class="form-control" style="width: 250px;" type="text" name="name" placeholder="Nome" required>
 		<br>
 		<br>		
-		<b> Cognome: </b>
+		<b> *Cognome: </b>
 		<br>		
-		<input class="form-control" style="width: 250px;" type="text" name="surname" placeholder="Cognome">
+		<input class="form-control" style="width: 250px;" type="text" name="surname" placeholder="Cognome" required>
 		<br>
 		<br>
 		<b> Email: </b> 
@@ -57,12 +57,12 @@
 		<br>
 		<b> *Username: </b> 
 		<br>
-		<input class="form-control" style="width: 250px;" type="text" name="username" placeholder="Username"> 
+		<input class="form-control" style="width: 250px;" type="text" name="username" placeholder="Username" required> 
 		<br>
 		<br>
         <b> *Password: (min 8 caratteri) </b> 
         <br>
-		<input class="form-control" style="width: 250px;" type="password" name="password" value="" placeholder="Password"> 
+		<input class="form-control" style="width: 250px;" type="password" name="password" value="" placeholder="Password" required> 
 		<br>
 		<p>* campi obbligatori</p>
 		<br>
@@ -70,7 +70,7 @@
 		<input style="outline: none;" class="Submit" type="button" value="Torna al login" name="invio" onclick="location.href='login.php'"> 
         
 		<?php
-		  echo "<br><br><font size=4 color='red'>" . @$_GET['failed'] . "</font>";
+		  echo "<br><br><font size=4 color='red'>" . @$_GET['failed'] . "</font>";   //print error like "username already used"
 	    ?>
 	  </div>
 	</form>	  

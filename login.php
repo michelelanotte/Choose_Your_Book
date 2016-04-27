@@ -5,7 +5,7 @@
 	<link rel="stylesheet" href="css/style_login.css" type="text/css">
   </head>
   
-  <body style="top: 100%; left: 100%; background-size: cover;" background = "background_login.jpg">
+  <body style="top: 100%; left: 100%; background-size: cover; width: 100%; height: 100%" background = "background_login.jpg">
 	<form action="login.php" method='POST'>
 	  <br>	  
 	  <div class="containerLogin">
@@ -13,9 +13,9 @@
 	      <font class="title" size=6 color='white' face='Lucida Calligraphy'> LOGIN: </font> 
 		  <br>
 		  <br>
-          <input style="outline: none; width: 220px; height: 2.5em; border-width: 0.5px; border-radius: .4em;" type="text" name="username" placeholder='Username'>
+          <input style="outline: none; width: 220px; height: 2.5em; border-width: 0.5px; border-radius: .4em;" type="text" name="username" placeholder='Username' required>
           <br> 		   
-		  <input style="outline: none; width: 220px; height: 2.5em; border-width: 0.1px; border-radius: .4em;" type="password" name="password" placeholder='Password'>
+		  <input style="outline: none; width: 220px; height: 2.5em; border-width: 0.1px; border-radius: .4em;" type="password" name="password" placeholder='Password' required>
 		  <br> 
 		  <br>
 	      <input style="outline: none;" class="submit" type="submit" value='Accedi'> 	 
@@ -33,12 +33,15 @@
   @$username = trim($_POST['username']);
   @$password = md5($_POST['password']);
   $query = mysqli_query($conn, "SELECT * FROM users");
+  
+  /*with next instruction, the variable row will contains all rows from users. With the controls between fields into
+    the table and input values, there will be authenticate*/
   while($row = mysqli_fetch_array($query))
   {
     if($row['username'] === $username && $row['password'] === $password)
       switch($row['admin']){
         case 1: 
-		  $_SESSION['logged_admin'] = true;
+		  $_SESSION['logged_admin'] = true;       
 		  header("location: admin/administrator.php");
 		break;
 		

@@ -7,6 +7,7 @@
   
   <body class="display">
 	<div class="receipt">
+	<!-- here it is generate receipt to pick up the book -->
       <?php
 	    @session_start();
 	    include("../connect_database.php");
