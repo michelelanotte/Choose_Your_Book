@@ -57,7 +57,7 @@
 
 .home_user {
   position: absolute;
-  margin-top: 8%;
+  margin-top: 5%;
   width: 100%;
 }
 
@@ -73,7 +73,7 @@
 @media only screen and (max-width: 840px) {
   [class="home_user"] {
     position: absolute;
-	top: 40vh;
+	top: 43vh;
 	width: auto;
   }
 }
