@@ -29,10 +29,10 @@
 	  </form>
       <table cellpadding='5px' style="border-collapse: collapse" align='center' border=1>
 	    <tr rowspan = 2>
-		  <td align='center'><font size=4 color='red' face='Lucida Calligraphy'> Codice <br> prenotazione </td>
-		  <td align='center' width = '250px' ><font size=3 color='red' face='Lucida Calligraphy'> Titolo libro </font></td>
-		  <td align='center' width = '200px'><font size=3 color='red' face='Lucida Calligraphy'> Autore </font></td>
-		  <td align='center'><font size=3 color='red' face='Lucida Calligraphy'> Data di <br> prenotazione </font></td>
+		  <th align='center'><font size=4 color='red' face='Lucida Calligraphy'> Codice <br> prenotazione </th>
+		  <th align='center' width = '250px' ><font size=3 color='red' face='Lucida Calligraphy'> Titolo libro </font></th>
+		  <th align='center' width = '200px'><font size=3 color='red' face='Lucida Calligraphy'> Autore </font></th>
+		  <th align='center'><font size=3 color='red' face='Lucida Calligraphy'> Data di <br> prenotazione </font></th>
 		</tr>
         
 		<?php  

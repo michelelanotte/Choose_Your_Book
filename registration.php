@@ -8,11 +8,11 @@
       @$nation = $_POST['nation'];
       @$email = trim($_POST['email']);
       @$username = trim(mysqli_real_escape_string($conn, $_POST['username'])); 
-      @$password = md5($_POST['password']);
-      @$sex = $_POST['sex']; 	  
+      @$password = md5($_POST['password']);	  
       $query = mysqli_query($conn, "SELECT * FROM users");    
-	  $insert =  mysqli_query($conn,"INSERT INTO users (name,surname,date_birth,nation,email,sex,username,password) VALUES ('$name','$surname','$date','$nation','$email','$sex','$username','$password')") 
-          or header("location: registration_html.php?failed=Username non disponibile!");	  
+	  $insert =  mysqli_query($conn,"INSERT INTO users (name,surname,date_birth,nation,email,username,password) 
+	               VALUES ('$name','$surname','$date','$nation','$email','$username','$password')") 
+                   or header("location: registration_html.php?failed=Username non disponibile!");	  
 		  
       $_POST['username'] = "";
       $_POST['password'] = ""; 

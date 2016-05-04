@@ -20,9 +20,9 @@
 		<input class="form-control" style="width: 250px;" type="text" name="surname" placeholder="Cognome" required>
 		<br>
 		<br>
-		<b> Email: </b> 
+		<b> *Email: </b> 
 		<br>
-	    <input class="form-control" style="width: 250px;" type="email" name="email" placeholder="esempio@hotmail.it"> 
+	    <input class="form-control" style="width: 250px;" type="email" name="email" placeholder="esempio@hotmail.it" required> 
 		<br>
 		<br>
 		<b> Data di nascita: </b> 
@@ -33,7 +33,7 @@
 		<b> Paese: </b> 
 		<br>
 		<select class="form-control" style = "width: 200px;" name="nation">
-          <option value="default" select="selected"></option>	
+          <option value="default" selected="selected"></option>	
 		  <option value="Italia"> Italia </option>
 		  <option value="Francia"> Francia </option>
 		  <option value="Germania"> Germania </option>
@@ -43,15 +43,6 @@
 		  <option value="Belgio"> Belgio </option>
 		  <option value="Olanda"> Paesi Bassi </option>
 		  <option value="Russia"> Russia </option>
-		</select>
-		<br>
-		<br>
-		<b> Sesso: </b> 
-		<br>		
-        <select class="form-control" style="width: 200px;" name="sex">
-          <option value="default" select="selected"></option>	
-		  <option value="male"> Maschio </option>
-		  <option value="female"> Femmina </option>
 		</select>
 		<br>
 		<br>

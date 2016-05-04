@@ -1,4 +1,6 @@
 <?php
+  //creation DB and hers tables if not exist it
+  //Authentication admin -->   Username: admin   Password: prova1234
   $conn = mysqli_connect("localhost", "root", "");
   $db = mysqli_query($conn, "CREATE DATABASE my_chooseyourbook");
   $books = mysqli_query($conn, "CREATE TABLE IF NOT EXISTS my_chooseyourbook.books( 
@@ -28,15 +30,20 @@
 								  date_birth date DEFAULT NULL,
 								  nation varchar(30) DEFAULT NULL,
 								  email varchar(50) DEFAULT NULL,
-								  sex varchar(10) DEFAULT NULL,
 								  username varchar(50) NOT NULL,
 								  password varchar(350) NOT NULL,
                                   admin tinyint(1) NOT NULL DEFAULT '0',
 								  PRIMARY KEY (`username`)
 								)") or die ("Tabella non creata");
 	
-  $password = md5(1234);	
+  $password = md5('prova1234');	
   $admin_account = mysqli_query($conn, "INSERT INTO my_chooseyourbook.users(username,password,admin)
                                           VALUES('admin','$password', 1)");
+									
+  //check if the database was created
+  if($db && $books && $reservations && $users && $admin_account)
+	echo "Database creato!";
+  else
+    echo "Database non creato!";
 mysqli_close($conn);
 ?>								

@@ -38,11 +38,11 @@
 	  
 	  <table cellpadding='5px' style="border-collapse: collapse" align='center' border=1>
 	    <tr rowspan=2>
-		  <td><font size=4 color='red' face='Lucida Calligraphy'> ID </td>
-		  <td align='center' width='35%'><font size=3 color='red' face='Lucida Calligraphy'> Titolo </font></td>
-		  <td align='center' width='30%'><font size=3 color='red' face='Lucida Calligraphy'> Autore </font></td>
-		  <td align='center'><font size=3 color='red' face='Lucida Calligraphy'> Data <br> pubblicazione </font></td>
-		  <td align='center'><font size=3 color='red' face='Lucida Calligraphy'> Disponibile </font></td>
+		  <th><font size=4 color='red' face='Lucida Calligraphy'> ID </td>
+		  <th align='center' width='25%'><font size=3 color='red' face='Lucida Calligraphy'> Titolo </font></th>
+		  <th align='center' width='20%'><font size=3 color='red' face='Lucida Calligraphy'> Autore </font></th>
+		  <th align='center'><font size=3 color='red' face='Lucida Calligraphy'> Data <br> pubblicazione </font></th>
+		  <th align='center'><font size=3 color='red' face='Lucida Calligraphy'> Disponibile </font></th>
 		</tr>
 		  
 	    <?php

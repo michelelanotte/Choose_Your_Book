@@ -1,5 +1,11 @@
 <html>
   <head>
+  <?php
+  session_start();
+    if ($_SESSION['logged_admin'] != true) {
+      header("location: ../login.php");
+    }
+  ?>
     <link rel="stylesheet" href="../css/style_admin.css" type="text/css">
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,41 +24,6 @@
 		<b> Cognome: </b>
 		<br>		
 		<input class="form-control" style="width: 250px;" type="text" name="surname" placeholder="Cognome">
-		<br>
-		<br>
-		<b> Email: </b> 
-		<br>
-	    <input class="form-control" style="width: 250px;" type="email" name="email" placeholder="esempio@hotmail.it"> 
-		<br>
-		<br>
-		<b> Data di nascita: </b> 
-		<br>
-		<input class="form-control" style="width: 200px;" align='center' type="date" name="date"> 
-		<br>
-		<br>		
-		<b> Paese: </b> 
-		<br>
-		<select class="form-control" style = "width: 200px;" name="nation">
-          <option value="default" select="selected"></option>	
-		  <option value="Italia"> Italia </option>
-		  <option value="Francia"> Francia </option>
-		  <option value="Germania"> Germania </option>
-		  <option value="Stati Uniti"> Stati Uniti </option>
-		  <option value="Spagna"> Spagna </option>
-		  <option value="Portogallo"> Portogallo </option>
-		  <option value="Belgio"> Belgio </option>
-		  <option value="Olanda"> Paesi Bassi </option>
-		  <option value="Russia"> Russia </option>
-		</select>
-		<br>
-		<br>
-		<b> Sesso: </b> 
-		<br>		
-        <select class="form-control" style="width: 200px;" name="sex">
-          <option value="default" select="selected"></option>	
-		  <option value="male"> Maschio </option>
-		  <option value="female"> Femmina </option>
-		</select>
 		<br>
 		<br>
 		<b> *Username: </b> 

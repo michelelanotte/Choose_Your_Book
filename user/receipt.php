@@ -18,7 +18,7 @@
 		  $title = $_GET['title'];
 	      $username = $_SESSION['user'];
 		  $data = $_GET['data'];
-          $row = mysqli_query($conn, "SELECT name, surname, nation, email, sex FROM users WHERE username = '$username';");
+          $row = mysqli_query($conn, "SELECT name, surname, nation, email FROM users WHERE username = '$username';");
       	  $user = mysqli_fetch_array($row);		
 		  
 		  echo "<font color='red' size='5' style='position: absolute; top: 4px; left: 135px'><b>DATI DELL'UTENTE:</b></font><br>";
@@ -34,16 +34,7 @@
 		  
 		  echo "<font size=5 style='position: absolute; top: 135px; left: 124px'><b>EMAIL:</b></font> 
 		    <font size=4 style='position: absolute; top: 137px; left: 280px'>" . $user['email']. "</font><br>";
-		  
-		  if($user['sex'] === 'male') {
-			$user['sex'] = "maschio";
-		  }
-		  else {
-			$user['sex'] = "femmina"; 
-		  }			
-  		  echo "<font size=5 style='position: absolute; top: 168px; left: 130.5px'><b>SESSO:</b></font> 
-		      <font size=4 style='position: absolute; top: 170px; left: 280px'>"  . $user['sex']. "</font><br>";
-		  
+		  		  
 		  echo "<br><font color='red' size='5' style='position: relative; top: 100px; left: 10px'><b>INFORMAZIONI LIBRO:</b></font><br>";
 		  
 		  echo "<font size=4 style='position: absolute; top: 270px; left: 65px'><b>LIBRO PRENOTATO : </b></font> 

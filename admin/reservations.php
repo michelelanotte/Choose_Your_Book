@@ -28,17 +28,18 @@
 	  
 	  <table cellpadding='5px' style="border-collapse: collapse" align='center' border=1>
 	    <tr rowspan=2>
-		  <td align='center' width='15%'><font size=3 color='red' face='Lucida Calligraphy'> Codice <br> Prenotazione </font></td>
-		  <td align='center' width='22%'><font size=3 color='red' face='Lucida Calligraphy'> Data </font></td>
-		  <td align='center' width='27%'><font size=3 color='red' face='Lucida Calligraphy'> Libro </font></td>
-		  <td align='center' width='18%'><font size=3 color='red' face='Lucida Calligraphy'> Nome </font></td>
-		  <td align='center' width='20%'><font size=3 color='red' face='Lucida Calligraphy'> Cognome </font></td>
+		  <th align='center'><font size=3 color='red' face='Lucida Calligraphy'> Codice <br> Prenotazione </font></th>
+		  <th align='center'><font size=3 color='red' face='Lucida Calligraphy'> Data </font></th>
+		  <th align='center' width='25%'><font size=3 color='red' face='Lucida Calligraphy'> Libro </font></th>
+		  <th align='center' width='15%'><font size=3 color='red' face='Lucida Calligraphy'> Nome </font></th>
+		  <th align='center' width='15%'><font size=3 color='red' face='Lucida Calligraphy'> Cognome </font></th>
+		  <th align='center' width='20%'><font size=3 color='red' face='Lucida Calligraphy'> Email </font></th>
 		</tr>
 		  
 	    <?php
 	      include("../connect_database.php");
           @$id = trim(mysqli_real_escape_string($conn, $_POST['id']));
-          $find = mysqli_query($conn, "SELECT r.ID, r.date, b.Title, u.name, u.surname FROM books b, reservations r, users u
+          $find = mysqli_query($conn, "SELECT r.ID, r.date, b.Title, u.name, u.surname, u.email FROM books b, reservations r, users u
 		      WHERE r.ID LIKE '%$id%' && b.ID = r.ID_book && r.username = u.username ORDER BY r.ID;");
 						        
 	      while($row = mysqli_fetch_array($find)){
@@ -48,6 +49,7 @@
 		    echo "<td align='center'>" . $row['Title'] . "</td>";
 			echo "<td align='center'>" . ucfirst($row['name']) . "</td>";
 		    echo "<td align='center'>" . ucfirst($row['surname']) . "</td>";
+			echo "<td align='center'>" . $row['email'] . "</td>";
 	      }
 	    
           mysqli_close($conn);
