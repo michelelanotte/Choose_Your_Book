@@ -1,12 +1,12 @@
+<?php
+  include("menu_admin.html");
+  session_start();
+  if ($_SESSION['logged_admin'] != true) {
+    header("location: ../login.php");
+  }
+?>
 <html>
   <head>
-  	<?php
-      include("menu_admin.html");
-	  session_start();
-      if ($_SESSION['logged_admin'] != true) {
-        header("location: ../login.php");
-      }
-    ?>
     <link rel="stylesheet" href="../css/style_admin.css" type="text/css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>

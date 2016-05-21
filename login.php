@@ -15,7 +15,7 @@
 		  <br>
           <input style="outline: none; width: 220px; height: 2.5em; border-width: 0.5px; border-radius: .4em;" type="text" name="username" placeholder='Username' required>
           <br> 		   
-		  <input style="outline: none; width: 220px; height: 2.5em; border-width: 0.1px; border-radius: .4em;" type="password" name="password" placeholder='Password' required>
+		  <input style="outline: none; width: 220px; height: 2.5em; border-width: 0.5px; border-radius: .4em;" type="password" name="password" placeholder='Password' required>
 		  <br> 
 		  <br>
 	      <input style="outline: none;" class="submit" type="submit" value='Accedi'> 	 

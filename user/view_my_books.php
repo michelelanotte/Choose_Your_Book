@@ -1,19 +1,19 @@
+<?php
+  @session_start();
+  include("../connect_database.php");
+  if ($_SESSION['logged_user'] != true)
+  {
+	header("location: ../login.php");
+  }
+  include("menu_user.html"); 
+?>	
 <html>
   <head>    
-	<?php
-	  @session_start();
-	  include("../connect_database.php");
-	  if ($_SESSION['logged_user'] != true)
-	  {
-	    header("location: ../login.php");
-	  }
-	  include("menu_user.html"); 
-	?>	
+    <link rel="stylesheet" href="../css/style_user.css" type="text/css">
+	<meta name= "viewport" content="width=device-width, initial-scale=1.0">
   </head>
   
   <body class="display" style="background-color: #E6E6FA;">
-    <link rel="stylesheet" href="../css/style_user.css" type="text/css">
-	<meta name= "viewport" content="width=device-width, initial-scale=1.0">
     <div class="viewUserBooks">
 	  <form action= <?php echo $_SERVER['PHP_SELF'] ?> method = 'POST'>	    
 	    <b>	Cerca libro: </b>

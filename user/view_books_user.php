@@ -1,13 +1,12 @@
+<?php
+  @session_start();
+  if ($_SESSION['logged_user'] != true) {
+    header("location: ../login.php");
+  }
+  include("menu_user.html"); 
+?>
 <html>
-  <head>
-    <?php
-	  @session_start();
-	  if ($_SESSION['logged_user'] != true) {
-	    header("location: ../login.php");
-	  }
-	  include("menu_user.html"); 
-    ?>
-	
+  <head>	
 	<link rel="stylesheet" href="../css/style_user.css" type="text/css">
 	<meta name="viewport" content="width = device-width, initial-scale=1.0">
   </head>
@@ -82,7 +81,9 @@
 			  echo "<td align='center'><a href='reserve_book.php?title=$title'> Prenota ora! </a></td>";
 			  $name_file = $row['Name_File'];
 			  if($name_file != NULL)
-                echo "<td align='center'><a href='download_book.php?file=$name_file'> Vedi anteprima! </a></td></tr>";			  
+                echo "<td align='center'><a href='download_book.php?file=$name_file'> Vedi anteprima! </a></td></tr>";	
+			  else 
+				echo "<td align='center'><font size=3 color='red'>Anteprima non disponibile!</font></td></tr>";
 	        }
 	  
           mysqli_close($conn);
