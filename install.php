@@ -19,8 +19,8 @@
   $reservations = mysqli_query($conn, "CREATE TABLE IF NOT EXISTS my_chooseyourbook.reservations(
 									     ID int(11) NOT NULL AUTO_INCREMENT,
 										 date timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-                                         ID_book int(11) DEFAULT NULL,
-                                         username varchar(50) DEFAULT NULL,
+                                         ID_book int(11) REFERENCES my_chooseyourbook.books(ID),
+                                         username varchar(50) REFERENCES my_chooseyourbook.users(username),
                                          PRIMARY KEY (ID)
 									   )") or die ("Tabella non creata");
 									   
